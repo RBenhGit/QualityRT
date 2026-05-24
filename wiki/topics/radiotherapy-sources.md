@@ -1,26 +1,36 @@
-# Radiotherapy Sources
+# Authoritative Sources on Radiotherapy Quality and Risk Management
 
-**Type:** Topic
-**Status:** stub
+**Type:** Synthesis
+**Status:** developing
 **Last updated:** 2026-05-24
-**Sources:** [radiotherapy-sources]
+**Sources:** [radiotherapy-sources], [tg100-aapm-2016], [ro-ils-astro-aapm], [who-radiotherapy-risk-profile-2008], [iaea-safety-reports-17-2000], [fmea-jacmp-broggi-2013]
 
 ## Summary
-Automatically compiled stub page representing research findings from the raw source file `radiotherapy-sources.md`.
+
+Five authoritative sources form the core literature on radiotherapy patient quality, risk management, and incident learning. Together they cover three distinct approaches: retrospective accident analysis (WHO, IAEA), proactive workflow risk tools (TG-100 FMEA), and national incident learning infrastructure (RO-ILS). Practical FMEA implementation studies (Broggi 2013) bridge the theoretical frameworks and clinical practice.
 
 ## Key Facts / Claims
-- # Authoritative Sources on Radiotherapy Quality and Risk Management [radiotherapy-sources]
-- This document gathers core authoritative sources, scientific literature, and industry guidelines on radiotherapy patient quality, risk management methods (like FMEA/TG100), and Incident Learning Systems (like ROILS). [radiotherapy-sources]
-- ## 1. AAPM Task Group 100 (TG100) Report [radiotherapy-sources]
-- The landmark publication that shifted the radiotherapy community from prescriptive machineonly checking to proactive workflow risk analysis. [radiotherapy-sources]
-- *   **Title:** Application of risk analysis methods to radiation therapy quality management (AAPM Task Group 100 Report) [radiotherapy-sources]
+
+- **TG-100 (AAPM, 2016):** Formal endorsement of process mapping, FMEA, and FTA for radiotherapy QM; introduced RPN scoring and risk-based QM plan design [tg100-aapm-2016]
+- **RO-ILS (ASTRO/AAPM, 2010–present):** National non-punitive incident learning database with >10,000 events; federally protected under PSQIA [ro-ils-astro-aapm]
+- **WHO Radiotherapy Risk Profile (2008):** Analyzed 3,125 errors and 4,616 near-misses; mandatory DQA; dosimetry errors most common [who-radiotherapy-risk-profile-2008]
+- **IAEA Safety Reports No. 17 (2000):** Historical accident case studies (Costa Rica, Panama, Poland); SEPAR framework; multi-layer defense-in-depth principle [iaea-safety-reports-17-2000]
+- **Broggi et al. 2013 (JACMP):** Practical FMEA on tomotherapy; 74 failure modes; RPN threshold 125; contouring and CT calibration curve highest-risk stages [fmea-jacmp-broggi-2013]
+- All five sources converge on the same highest-risk stages: **contouring, treatment planning data transfer, and independent verification** [radiotherapy-sources]
 
 ## Connections
-- [[radiotherapy-sources]] — Automatically linked related topic
-- [[llm-wiki-pattern]] — Part of the persistent knowledge graph
+
+- [[tg100-aapm]] — full page on the TG-100 report
+- [[ro-ils]] — full page on the RO-ILS incident learning system
+- [[who-radiotherapy-risk-profile]] — full page on the WHO technical manual
+- [[iaea-safety-reports-17]] — full page on the IAEA Safety Reports Series No. 17
+- [[fmea-radiotherapy]] — full page on FMEA methodology in radiotherapy, incorporating Broggi 2013
 
 ## Open Questions
-- What other key conclusions does this file hold?
+
+- Is there a single unified international guideline that synthesizes all five sources into one QM standard?
+- How do these sources apply to proton therapy, brachytherapy, and adaptive radiotherapy?
 
 ## Raw Notes
-Ingested source title: radiotherapy-sources.md.
+
+This page is a synthesis index. Each source has a dedicated raw file and wiki page linked above.
