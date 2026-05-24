@@ -13,7 +13,6 @@ RO-ILS is the only medical specialty society-sponsored incident learning system 
 
 - Co-sponsored by ASTRO and AAPM; operations partner is Clarity PSO (a federally recognized Patient Safety Organization) [ro-ils-astro-aapm]
 - Part of ASTRO's **Target Safely** patient protection initiative, launched 2010 [ro-ils-astro-aapm]
-- URL: https://www.astro.org/practice-support/quality-and-safety/ro-ils [ro-ils-astro-aapm]
 - **No enrollment fees** for radiation therapy centers [ro-ils-astro-aapm]
 - Operates under **PSQIA (Patient Safety and Quality Improvement Act of 2005)** — federal confidentiality and privilege protections apply; data cannot be used in malpractice litigation [ro-ils-astro-aapm]
 - Enables a **"just culture"**: non-punitive environment where staff can log incidents without fear of blame [ro-ils-astro-aapm]
@@ -28,6 +27,7 @@ RO-ILS is the only medical specialty society-sponsored incident learning system 
 - [[tg100-aapm]] — RO-ILS incident data validates and informs TG-100 FMEA risk prioritization; TG-100 FMEA occurrence scores can be calibrated using RO-ILS national rates
 - [[fmea-radiotherapy]] — RO-ILS data provides the empirical occurrence rates that FMEA studies use to score the "O" dimension of RPN
 - [[radiotherapy-sources]] — RO-ILS is one of the five core authoritative sources in the radiotherapy sources overview
+- [[rt-quality-management]] — RO-ILS is the reactive incident-learning complement to proactive QM tools
 
 ## Open Questions
 

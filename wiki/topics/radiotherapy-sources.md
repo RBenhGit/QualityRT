@@ -25,6 +25,7 @@ Five authoritative sources form the core literature on radiotherapy patient qual
 - [[who-radiotherapy-risk-profile]] — full page on the WHO technical manual
 - [[iaea-safety-reports-17]] — full page on the IAEA Safety Reports Series No. 17
 - [[fmea-radiotherapy]] — full page on FMEA methodology in radiotherapy, incorporating Broggi 2013
+- [[rt-quality-management]] — synthesis of the QM framework built on these sources
 
 ## Open Questions
 

@@ -30,6 +30,7 @@ The AAPM Task Group 100 report (Huq et al., *Medical Physics*, July 2016) is the
 - [[radiotherapy-sources]] — TG-100 is one of the five core authoritative sources compiled in the radiotherapy sources overview
 - [[who-radiotherapy-risk-profile]] — WHO profile is retrospective/evidence-based; TG-100 is prospective/proactive — complementary approaches
 - [[iaea-safety-reports-17]] — IAEA report predates TG-100 but shares the same defense-in-depth philosophy
+- [[rt-quality-management]] — TG-100 is the primary framework described in the RT QM synthesis page
 
 ## Open Questions
 

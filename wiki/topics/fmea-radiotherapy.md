@@ -48,6 +48,7 @@ Failure Mode and Effects Analysis (FMEA) is a proactive, bottom-up risk assessme
 - [[who-radiotherapy-risk-profile]] — WHO's retrospective accident analysis identifies the same high-risk stages that FMEA proactively flags
 - [[iaea-safety-reports-17]] — SEPAR framework complements FMEA; both address systematic safety evaluation in radiotherapy
 - [[radiotherapy-sources]] — FMEA methodology is a central theme of the radiotherapy sources collection
+- [[rt-quality-management]] — FMEA is a core component of a comprehensive RT QM program
 
 ## Open Questions
 
