@@ -113,6 +113,20 @@ See also: [research-<other-subject> repo](<github-url>) — brief note on the re
 
 ---
 
+## Slash Commands & Custom Skills
+
+To trigger operations automatically in your agent workspace, ContextSpace supports two slash command formats:
+
+1. **Legacy Slash Commands (`.claude/commands/`):**
+   - Simple markdown instructions for `/ingest`, `/query`, and `/lint`.
+2. **Modern Custom Skills (`.claude/skills/`):**
+   - Recommended skills leveraging YAML frontmatter config to define description, allowed tools, and execution procedures.
+   - `/ingest` — Auto-processes raw sources into the wiki.
+   - `/query` — Asks research questions against the compiled wiki.
+   - `/lint` — Checks the health and consistency of the wiki.
+
+---
+
 ## Source Naming Convention
 
 When logging sources, use a short slug derived from the filename or URL:

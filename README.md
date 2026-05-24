@@ -43,10 +43,17 @@ ContextSpace/
 │   └── (markdown files capturing design decisions & Q&As)
 │
 └── .claude/
-    └── commands/          ← Claude Code slash commands
-        ├── ingest.md      ← /ingest  — add new sources to the wiki
-        ├── query.md       ← /query   — ask questions against the wiki
-        └── lint.md        ← /lint    — health check & consistency pass
+    ├── commands/          ← Claude Code legacy slash commands
+    │   ├── ingest.md      ← /ingest  — add new sources to the wiki
+    │   ├── query.md       ← /query   — ask questions against the wiki
+    │   └── lint.md        ← /lint    — health check & consistency pass
+    └── skills/            ← Claude Code modern custom skills (recommended)
+        ├── ingest/
+        │   └── SKILL.md   ← /ingest  — scan raw/, compile and link wiki/topics/
+        ├── query/
+        │   └── SKILL.md   ← /query   — answer queries using wiki & index
+        └── lint/
+            └── SKILL.md   ← /lint    — run full health check on wiki
 ```
 
 ---
