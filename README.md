@@ -28,8 +28,16 @@ Think of it like a compiler: your raw articles are **source code**, the wiki is 
 
 ```
 ContextSpace/
+├── .github/
+│   └── workflows/         ← GitHub Actions manual & automated workflows
+│       ├── ingest.yml     ← Manual/Automatic Ingest Action
+│       ├── query.yml      ← Manual Query Action (Step Summary UI)
+│       └── lint.yml       ← Continuous Integration Lint Check
+│
 ├── README.md              ← You are here
 ├── SCHEMA.md              ← Wiki conventions & agent instructions
+├── workflow.py            ← Unified Python CLI automation script
+├── requirements.txt       ← Python CLI dependencies
 │
 ├── raw/                   ← Drop source material here (never modified)
 │   └── (articles, PDFs, papers, web clips, notes)
@@ -87,30 +95,49 @@ Run `/lint` periodically. The LLM will:
 
 ---
 
-## Quickstart
+## Quickstart & Running Commands
 
-**Prerequisites:** Claude Code CLI (`claude` in your PATH)
+This repository supports three flexible execution environments: **GitHub Actions (Actions Commands)**, **Local Python CLI**, and **Claude Code Skills / Slash Commands**.
 
+---
+
+### 1. GitHub Actions (Actions Commands) 🚀
+Run operations directly from the browser on GitHub under the **Actions** tab:
+*   **Ingest Wiki Sources:** Manually trigger to scan `raw/` and compile the wiki. Files created or updated under `wiki/` will be committed back to your branch automatically. (Also triggers automatically on push to `raw/**`).
+*   **Query Wiki:** Trigger manually, input your research question in the form prompt, and read the cited, compiled answer beautifully formatted in the **Job Summary** of the Actions run.
+*   **Lint Wiki Health Check:** Trigger manually or automatically on pushes to verify markdown links, orphaned pages, stale stubs, and index consistency.
+
+> [!TIP]
+> **API Credentials:** For full AI synthesis, configure `GEMINI_API_KEY` as a GitHub **Repository Secret** (`Settings -> Secrets and variables -> Actions`). If omitted, the engine runs in **Mock Mode** for end-to-end testing without API costs.
+
+---
+
+### 2. Local Python CLI 🐍
+You can run the unified automation script directly on your terminal:
 ```bash
-# 1. Clone this repo
-git clone https://github.com/rbenhgit/contextspace
-cd contextspace
+# 1. Install dependencies
+pip install -r requirements.txt
 
-# 2. Drop your first sources into raw/
-cp ~/Downloads/paper.pdf raw/
-# or paste text into raw/my-notes.md
+# 2. Add your Gemini API key (optional)
+# Copy .env.example to .env and fill in GEMINI_API_KEY
 
-# 3. Run the first ingest
-claude /ingest
+# 3. Compile raw sources into wiki topics
+python workflow.py ingest
 
-# 4. Browse the wiki
-# Open wiki/ in Obsidian, or just read the .md files
+# 4. Ask questions against the compiled wiki
+python workflow.py query "What is the LLM Wiki pattern?"
 
-# 5. Ask a question
-claude /query
+# 5. Check the health of the wiki
+python workflow.py lint
 ```
 
 ---
+
+### 3. Claude Code Slash Commands & Skills 💻
+If running inside the Claude Code CLI, the custom slash commands and modern YAML-frontmatter skills are registered automatically. Simply type:
+- `/ingest`
+- `/query`
+- `/lint`
 
 ## Use Cases
 

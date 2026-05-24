@@ -127,6 +127,24 @@ To trigger operations automatically in your agent workspace, ContextSpace suppor
 
 ---
 
+## Execution Workflows (Actions & CLI)
+
+To scale compilation across diverse developer workflows, the project provides a unified Python automation script (`workflow.py`) and pre-configured **GitHub Actions (Actions Commands)**.
+
+### 1. Unified Python CLI
+- Serves as the localized execution engine.
+- Supports commands: `ingest` (wiki compiler), `query` (search & synthesis), and `lint` (consistency validation).
+- Operates under a dual-mode fallback paradigm:
+  - **LLM Mode (Active when `GEMINI_API_KEY` is present):** Automates semantic topic chunking, deep indexing, and citable question synthesis.
+  - **Mock Mode (Active when key is absent):** Leverages deterministic structure rules (word-matching, stub templating, and manual linking) to allow local dry-runs and pipeline testing without API usage.
+
+### 2. GitHub Actions (Actions Commands)
+- Integrates manual workflow commands (`workflow_dispatch`) directly into the GitHub repository UI.
+- **Auto-Commit Rule:** The `ingest` workflow is empowered with write access to commit new compiled topic markdown sheets and updated indexes directly back to the active branch.
+- **Output Interface:** Workflows capture CLI returns and format them into the **GitHub Step Summary** UI for rapid, premium readability.
+
+---
+
 ## Source Naming Convention
 
 When logging sources, use a short slug derived from the filename or URL:

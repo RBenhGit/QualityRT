@@ -1,0 +1,27 @@
+name: Query Wiki
+
+on:
+  workflow_dispatch:
+    inputs:
+      question:
+        description: 'Ask a research question against the compiled wiki'
+        required: true
+        type: string
+
+jobs:
+  query:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Query Command
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python workflow.py query "${{ github.event.inputs.question }}"
