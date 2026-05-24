@@ -39,6 +39,9 @@ ContextSpace/
 │   ├── log.md             ← Append-only activity log
 │   └── topics/            ← One .md file per concept / entity / topic
 │
+├── output/                ← Discussion logs & research session notes (our discussions)
+│   └── (markdown files capturing design decisions & Q&As)
+│
 └── .claude/
     └── commands/          ← Claude Code slash commands
         ├── ingest.md      ← /ingest  — add new sources to the wiki

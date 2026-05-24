@@ -1,6 +1,25 @@
 # ContextSpace Schema
 
-This file governs how the LLM agent maintains this wiki. Read it before any ingest, query, or lint operation.
+This file governs how the LLM agent maintains this wiki and archives discussions. Read it before any ingest, query, or lint operation.
+
+---
+
+## The Output Folder (Discussion Logs)
+
+The `output/` directory serves as the official archive for all research discussions, architectural decisions, design alignment, and session logs between the User and the AI Assistant.
+
+### Function & Purpose
+1. **Traceability:** Captures the evolution of prompt designs, custom scripts, and system requirements.
+2. **Alignment:** Documents open questions, user feedback, and agreed-upon decisions.
+3. **Reproducibility:** Ensures that anyone (or any future agent) joining the project can understand *why* certain design decisions were made.
+
+### File Naming & Structure
+- Lowercase, chronological: `discussion_<number>_<short_description>.md` (e.g., `discussion_1_setup.md`).
+- Must contain:
+  - **Date:** The date of the discussion.
+  - **Topic:** High-level summary of what was discussed.
+  - **Decisions Made:** Bulleted list of final alignment points.
+  - **Next Steps:** Action items arising from the session.
 
 ---
 
