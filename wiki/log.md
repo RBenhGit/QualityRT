@@ -4,6 +4,15 @@ Append-only chronological record of all wiki operations.
 
 ---
 
+## 2026-05-24 — Ingestion run
+
+**Operation:** Source files processed
+**Sources processed:** [radiotherapy-sources] (radiotherapy-sources.md)
+**Pages created:** `radiotherapy-sources`
+**Pages updated:** (none)
+**Notes:** Automated ingestion run.
+
+
 ## 2026-05-20 — Initial setup
 
 **Operation:** Repository initialized
