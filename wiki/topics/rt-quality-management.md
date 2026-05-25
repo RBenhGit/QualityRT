@@ -35,6 +35,10 @@ Quality Management (QM) in radiotherapy is a structured, multi-layered system co
 - [[fmea-radiotherapy]] — The primary proactive risk analysis method within TG-100
 - [[ro-ils]] — The primary reactive incident learning tool in US radiation oncology
 - [[radiotherapy-sources]] — Authoritative sources underpinning this synthesis
+- [[tg100-aapm]] — The dominant U.S. QM standard; primary framework described here
+- [[who-radiotherapy-risk-profile]] — Retrospective evidence base for QM recommendations
+- [[iaea-safety-reports-17]] — SEPAR framework and international accident analysis
+- [[rt-patient-safety-context-map]] — Full domain context map: organizations, treatment chain risks, literature timeline
 
 ## Open Questions
 - How does QM differ for high-complexity modalities (SBRT, SRS, proton therapy) versus conventional fractionation?
