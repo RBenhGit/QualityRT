@@ -16,7 +16,9 @@ RO-ILS is the only medical specialty society-sponsored incident learning system 
 - **No enrollment fees** for radiation therapy centers [ro-ils-astro-aapm]
 - Operates under **PSQIA (Patient Safety and Quality Improvement Act of 2005)** — federal confidentiality and privilege protections apply; data cannot be used in malpractice litigation [ro-ils-astro-aapm]
 - Enables a **"just culture"**: non-punitive environment where staff can log incidents without fear of blame [ro-ils-astro-aapm]
-- Database contains **over 10,000 reported events** [ro-ils-astro-aapm]
+- Database contains **over 10,000 reported events** (initial); as of end of 2024: **41,516 events** from **781 enrolled facilities** [ro-ils-astro-aapm], [incident-learning-systems-international]
+- 24% of reported events were actual incidents reaching patients; ~10% rated potentially severe or critical [incident-learning-systems-international]
+- Over 100 educational releases issued (case studies, safety notices, themed reports, webinars) [incident-learning-systems-international]
 - Incident distribution: ~30% in treatment planning, ~26% in treatment delivery [ro-ils-astro-aapm]
 - **RO-HAC** (Radiation Oncology Healthcare Advisory Council): 8-member expert body (radiation oncologists, physicists, administrators, dosimetrists) that reviews data and issues alerts and reports [ro-ils-astro-aapm]
 - Institutions receive **quarterly benchmarking reports** comparing their safety events to national trends [ro-ils-astro-aapm]
@@ -28,6 +30,8 @@ RO-ILS is the only medical specialty society-sponsored incident learning system 
 - [[fmea-radiotherapy]] — RO-ILS data provides the empirical occurrence rates that FMEA studies use to score the "O" dimension of RPN
 - [[radiotherapy-sources]] — RO-ILS is one of the five core authoritative sources in the radiotherapy sources overview
 - [[rt-quality-management]] — RO-ILS is the reactive incident-learning complement to proactive QM tools
+- [[incident-learning-systems-international]] — international equivalents: SAFRON (IAEA), ROSIS (Europe), NSIR-RT (Canada), RANZCR (AUS/NZ)
+- [[human-factors-rt-safety]] — RO-ILS and SAFRON data provide the incident datasets analyzed in HFACS human factors studies
 
 ## Open Questions
 

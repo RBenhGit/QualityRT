@@ -4,6 +4,16 @@ Append-only chronological record of all wiki operations.
 
 ---
 
+## 2026-05-25 — Ingestion run #3
+
+**Operation:** Source files processed
+**Sources processed:** [fmea-advanced-modalities-mr-linac], [incident-learning-systems-international], [fmea-ai-automated-workflow], [aapm-tg-suite-linac-qa], [regulatory-framework-rt-usa], [human-factors-rt-safety]
+**Pages created:** `fmea-advanced-modalities`, `incident-learning-systems-international`, `fmea-ai-automated-workflow`, `aapm-tg-suite-linac-qa`, `regulatory-framework-rt-usa`, `human-factors-rt-safety`
+**Pages updated:** `ro-ils` (10-year stats: 781 facilities, 41,516 events; added SAFRON/ROSIS links), `fmea-radiotherapy` (advanced modalities + AI FMEA + human factors links), `tg100-aapm` (TG suite + advanced modalities links), `rt-patient-safety-context-map` (6 open questions answered, 6 new cross-links added)
+**Notes:** Sources fetched in response to open questions in rt-patient-safety-context-map. All 6 previously open questions now have dedicated wiki pages.
+
+---
+
 ## 2026-05-25 — Query synthesis saved
 
 **Operation:** Query → synthesis page

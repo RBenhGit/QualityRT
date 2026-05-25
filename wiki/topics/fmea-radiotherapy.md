@@ -49,6 +49,10 @@ Failure Mode and Effects Analysis (FMEA) is a proactive, bottom-up risk assessme
 - [[iaea-safety-reports-17]] — SEPAR framework complements FMEA; both address systematic safety evaluation in radiotherapy
 - [[radiotherapy-sources]] — FMEA methodology is a central theme of the radiotherapy sources collection
 - [[rt-quality-management]] — FMEA is a core component of a comprehensive RT QM program
+- [[fmea-advanced-modalities]] — FMEA applied to MR-linac, adaptive RT, SBRT, proton, brachytherapy
+- [[fmea-ai-automated-workflow]] — FMEA applied to AI-based contouring and fully automated treatment workflows
+- [[human-factors-rt-safety]] — HFACS confirms the same high-risk stages (treatment planning, data transfer) as FMEA
+- [[aapm-tg-suite-linac-qa]] — TG-218 patient-specific QA standards address the treatment planning output verification step identified as high-risk by FMEA
 
 ## Open Questions
 

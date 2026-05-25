@@ -219,16 +219,30 @@ Community case studies & safety notices
 - [[iaea-safety-reports-17]] — retrospective accident evidence base (IAEA); SEPAR
 - [[radiotherapy-sources]] — master index of the five core authoritative sources
 - [[rt-quality-management]] — companion synthesis: QM program structure, glossary, key terms
+- [[fmea-advanced-modalities]] — FMEA for MR-linac, adaptive RT, SBRT, proton, brachytherapy
+- [[fmea-ai-automated-workflow]] — FMEA for AI-based contouring and fully automated workflows
+- [[incident-learning-systems-international]] — global RT incident learning landscape: SAFRON, ROSIS, NSIR-RT, RANZCR
+- [[aapm-tg-suite-linac-qa]] — prescriptive equipment QA suite: TG-40, TG-142, TG-198, TG-218
+- [[regulatory-framework-rt-usa]] — NRC/FDA/Agreement States/state radiation control framework
+- [[human-factors-rt-safety]] — HFACS, supervision failures, fatigue, communication, safety culture
 
 ## Open Questions
 
-- How do these frameworks apply to proton therapy, brachytherapy, and adaptive/MR-guided RT?
-- What are the international equivalents to RO-ILS (UK NRLS, Australian systems)?
-- How does AI-assisted contouring and planning change the FMEA risk profile?
-- Which AAPM task group reports (TG-40, TG-142, TG-218) complement TG-100?
-- What are country-specific regulatory frameworks (NRC, state radiation control programs)?
-- How do staffing ratios, fatigue, and communication training affect the risk landscape?
+- What are validated FMEA templates for proton therapy and HDR brachytherapy workflows?
+- How do TG-218 gamma passing rates correlate with actual clinical outcomes and patient harm?
+- What is the federal pathway for reporting LINAC-based serious adverse events (no radioactive material)?
+- What is AAPM TG-275 and how does it complement TG-100?
+- How does regulatory variation across U.S. Agreement States affect measurable RT safety outcomes?
+- At what level of AI model performance does automated QA become sufficient to replace manual review?
 
 ## Raw Notes
 
-This page is a synthesized context map generated from all currently compiled wiki pages. It should be updated each time a major new source is ingested. Highest-priority gaps for future ingestion: brachytherapy QM, proton therapy safety, TG-142 linac QA, AI/automation risks.
+This page is a synthesized context map generated from all currently compiled wiki pages. It should be updated each time a major new source is ingested.
+
+Previously open questions now addressed by new wiki pages:
+- Advanced modalities → [[fmea-advanced-modalities]]
+- International ILS → [[incident-learning-systems-international]]
+- AI/automated workflow FMEA → [[fmea-ai-automated-workflow]]
+- AAPM TG suite (TG-40/142/218) → [[aapm-tg-suite-linac-qa]]
+- U.S. regulatory framework → [[regulatory-framework-rt-usa]]
+- Human factors/staffing/fatigue → [[human-factors-rt-safety]]
