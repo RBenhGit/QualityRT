@@ -14,6 +14,7 @@ WIKI_DIR = os.path.join(WORKSPACE_DIR, "wiki")
 TOPICS_DIR = os.path.join(WIKI_DIR, "topics")
 INDEX_PATH = os.path.join(WIKI_DIR, "index.md")
 LOG_PATH = os.path.join(WIKI_DIR, "log.md")
+TOPICS_DIR_URL = TOPICS_DIR.replace("\\", "/")
 
 # Ensure base directories exist
 os.makedirs(RAW_DIR, exist_ok=True)
@@ -155,7 +156,7 @@ def run_lint():
     report.append(f"### Broken Links ({len(broken_links)})")
     if broken_links:
         for pg, target in broken_links:
-            report.append(f"- `[[{target}]]` referenced in [{pg}.md](file:///d:/cowork/QualityRT/wiki/topics/{pg}.md)")
+            report.append(f"- `[[{target}]]` referenced in [{pg}.md](file:///{TOPICS_DIR_URL}/{pg}.md)")
     else:
         report.append("- No broken links found.")
     report.append("")
@@ -164,7 +165,7 @@ def run_lint():
     report.append(f"### Orphan Pages ({len(orphan_pages)})")
     if orphan_pages:
         for pg in sorted(orphan_pages):
-            report.append(f"- [{pg}.md](file:///d:/cowork/QualityRT/wiki/topics/{pg}.md) — no incoming links")
+            report.append(f"- [{pg}.md](file:///{TOPICS_DIR_URL}/{pg}.md) — no incoming links")
     else:
         report.append("- No orphan pages found.")
     report.append("")
@@ -173,7 +174,7 @@ def run_lint():
     report.append(f"### Stale Stubs ({len(stale_stubs)})")
     if stale_stubs:
         for pg, dt, days in stale_stubs:
-            report.append(f"- [{pg}.md](file:///d:/cowork/QualityRT/wiki/topics/{pg}.md) — Status: stub since {dt} ({days} days ago)")
+            report.append(f"- [{pg}.md](file:///{TOPICS_DIR_URL}/{pg}.md) — Status: stub since {dt} ({days} days ago)")
     else:
         report.append("- No stale stubs found.")
     report.append("")
@@ -190,12 +191,12 @@ def run_lint():
     if missing_summaries:
         report.append("**Missing / Short Summaries:**")
         for pg in missing_summaries:
-            report.append(f"- [{pg}.md](file:///d:/cowork/QualityRT/wiki/topics/{pg}.md) has a missing or extremely brief summary")
+            report.append(f"- [{pg}.md](file:///{TOPICS_DIR_URL}/{pg}.md) has a missing or extremely brief summary")
             
     if uncited_facts:
         report.append("**Uncited Facts / Claims:**")
         for pg, fact in uncited_facts:
-            report.append(f"- [{pg}.md](file:///d:/cowork/QualityRT/wiki/topics/{pg}.md): \"{fact[:60]}...\" has no citable [source-slug]")
+            report.append(f"- [{pg}.md](file:///{TOPICS_DIR_URL}/{pg}.md): \"{fact[:60]}...\" has no citable [source-slug]")
             
     if other_issues_count == 0:
         report.append("- No consistency or schema validation issues found.")
@@ -401,11 +402,11 @@ Raw Source Content:
     summary_md.append("")
     summary_md.append(f"**Pages Created ({len(pages_created)}):**")
     for p in pages_created:
-        summary_md.append(f"- [{p}.md](file:///d:/cowork/QualityRT/wiki/topics/{p}.md)")
+        summary_md.append(f"- [{p}.md](file:///{TOPICS_DIR_URL}/{p}.md)")
     summary_md.append("")
     summary_md.append(f"**Pages Updated ({len(pages_updated)}):**")
     for p in pages_updated:
-        summary_md.append(f"- [{p}.md](file:///d:/cowork/QualityRT/wiki/topics/{p}.md)")
+        summary_md.append(f"- [{p}.md](file:///{TOPICS_DIR_URL}/{p}.md)")
         
     summary_text = "\n".join(summary_md)
     print(summary_text)
@@ -647,6 +648,53 @@ This is a synthesized answer from the local wiki (Mock Mode active).
             
     return True
 
+# ==================== PROMOTE OPERATION ====================
+
+def run_promote(filename: str):
+    print(f"Promoting output file '{filename}' to raw source...")
+    
+    # 1. Locate file in output/
+    output_dir = os.path.join(WORKSPACE_DIR, "output")
+    source_path = os.path.join(output_dir, filename)
+    
+    # Try different extensions if not provided
+    if not os.path.exists(source_path):
+        if not filename.endswith(".md"):
+            source_path = os.path.join(output_dir, filename + ".md")
+            filename = filename + ".md"
+            
+    if not os.path.exists(source_path):
+        print(f"Error: Output file not found at {source_path}")
+        return False
+        
+    # 2. Copy to raw/
+    dest_path = os.path.join(RAW_DIR, filename)
+    print(f"Copying to {dest_path}...")
+    try:
+        with open(source_path, "r", encoding="utf-8") as sf:
+            content = sf.read()
+        with open(dest_path, "w", encoding="utf-8") as df:
+            df.write(content)
+    except Exception as e:
+        print(f"Error promoting file: {str(e)}")
+        return False
+        
+    print(f"Successfully promoted '{filename}' to raw/.")
+    
+    # 3. Run Ingest
+    print("\n--- Starting Ingest ---")
+    ingest_success = run_ingest()
+    if not ingest_success:
+        print("Ingest failed.")
+        return False
+        
+    # 4. Run Lint
+    print("\n--- Starting Lint ---")
+    lint_success = run_lint()
+    
+    print("\nPromote operation completed successfully!")
+    return True
+
 # ==================== CLI RUNNER ====================
 
 def main():
@@ -656,6 +704,7 @@ def main():
         print("  python workflow.py ingest        - Ingest new raw files into the wiki")
         print("  python workflow.py query <q>     - Query the wiki")
         print("  python workflow.py lint          - Check the wiki health")
+        print("  python workflow.py promote <f>   - Promote an output file to raw/ and run ingest + lint")
         sys.exit(1)
         
     cmd = sys.argv[1].lower()
@@ -673,6 +722,14 @@ def main():
         sys.exit(0 if success else 1)
     elif cmd == "lint":
         success = run_lint()
+        sys.exit(0 if success else 1)
+    elif cmd == "promote":
+        if len(sys.argv) < 3:
+            print("Error: promote requires a filename parameter.")
+            print("Usage: python workflow.py promote \"discussion_1_setup.md\"")
+            sys.exit(1)
+        f = sys.argv[2]
+        success = run_promote(f)
         sys.exit(0 if success else 1)
     else:
         print(f"Unknown command: {cmd}")

@@ -53,6 +53,9 @@ Failure Mode and Effects Analysis (FMEA) is a proactive, bottom-up risk assessme
 - [[fmea-ai-automated-workflow]] — FMEA applied to AI-based contouring and fully automated treatment workflows
 - [[human-factors-rt-safety]] — HFACS confirms the same high-risk stages (treatment planning, data transfer) as FMEA
 - [[aapm-tg-suite-linac-qa]] — TG-218 patient-specific QA standards address the treatment planning output verification step identified as high-risk by FMEA
+- [[brachytherapy-hdr-safety]] — the brachytherapy "length" failure modes and NRC event taxonomy feed brachytherapy FMEA; ASTRO HDR guidance points to TG-100 FMEA
+- [[advanced-modality-rt-safety]] — FMEA's catastrophic-failure focus parallels the IMRT/SRS-SBRT white-paper safeguards
+- [[rt-accidents-aviation-lessons]] — FMEA is the proactive leg of a safety-management system; Johns Hopkins FMEA missed 42% of incident-reported errors
 
 ## Open Questions
 

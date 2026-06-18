@@ -11,20 +11,21 @@ A knowledge management pattern where an LLM acts as a compiler: raw documents (a
 
 ## Key Facts / Claims
 
-- Introduced by Andrej Karpathy in April 2026 via GitHub Gist
-- The post received 16M views and 5,000 GitHub stars within days
-- Reported to be ~70x more token-efficient than RAG for repeated queries
-- Does not require vector databases, embeddings, or retrieval infrastructure
-- Works with any long-context LLM (Karpathy uses Claude)
-- Karpathy grew one research topic to ~100 articles / 400,000 words without writing a single word manually
-- Three core operations: **ingest**, **query**, **lint**
-- Planned extension: fine-tuning a model on the compiled wiki to bake knowledge into weights
+- Introduced by Andrej Karpathy in April 2026 via GitHub Gist [karpathy-llm-wiki-2026]
+- The post received 16M views and 5,000 GitHub stars within days [karpathy-llm-wiki-2026]
+- Reported to be ~70x more token-efficient than RAG for repeated queries [karpathy-llm-wiki-2026]
+- Does not require vector databases, embeddings, or retrieval infrastructure [karpathy-llm-wiki-2026]
+- Works with any long-context LLM (Karpathy uses Claude) [karpathy-llm-wiki-2026]
+- Karpathy grew one research topic to ~100 articles / 400,000 words without writing a single word manually [karpathy-llm-wiki-2026]
+- Three core operations: **ingest**, **query**, **lint** [karpathy-llm-wiki-2026]
+- Planned extension: fine-tuning a model on the compiled wiki to bake knowledge into weights [karpathy-llm-wiki-2026]
 
 ## Connections
 
 - [[rag-retrieval-augmented-generation]] — LLM Wiki is an alternative to RAG for personal/research knowledge bases
 - [[obsidian]] — recommended tool for browsing and visualizing the compiled wiki
 - [[claude-code]] — recommended agent runtime for running ingest/query/lint operations
+- [[discussion-1-setup]] — session log documenting the initial setup of this QualityRT wiki as an LLM Wiki implementation
 
 ## Open Questions
 

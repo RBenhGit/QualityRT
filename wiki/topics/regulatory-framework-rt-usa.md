@@ -28,6 +28,8 @@ Regulatory authority over radiation therapy in the United States is distributed 
 - [[ro-ils]] — RO-ILS operates under PSQIA providing the federal confidentiality protection absent from mandatory NRC reporting; the two systems are complementary, not duplicative
 - [[iaea-safety-reports-17]] — IAEA provides international safety standards; the U.S. regulatory framework partially implements these through NRC/Agreement State requirements
 - [[rt-patient-safety-context-map]] — regulatory framework is a key gap identified in the context map
+- [[brachytherapy-hdr-safety]] — brachytherapy (byproduct material) is under NRC 10 CFR 35: mandatory medical-event reporting, HDR physical-presence rules, Agreement States
+- [[advanced-modality-rt-safety]] — the SRS/SBRT white paper flags state/federal regulatory inconsistencies (radioactive vs X-ray sources) and calls for centralized event registries
 
 ## Open Questions
 

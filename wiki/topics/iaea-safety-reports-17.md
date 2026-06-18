@@ -31,6 +31,9 @@ IAEA Safety Reports Series No. 17 (2000) reviews historical radiotherapy acciden
 - [[ro-ils]] — RO-ILS implements the "learning from incidents" principle that the IAEA report advocates; PSQIA legal protections address the "fear of blame" barrier identified in this report
 - [[fmea-radiotherapy]] — SEPAR framework complements FMEA by providing a structured safety evaluation process
 - [[radiotherapy-sources]] — IAEA Safety Reports No. 17 is one of the five core authoritative sources in the radiotherapy sources overview
+- [[rt-accidents-aviation-lessons]] — Knöös's accident review draws directly on this IAEA catalog (~90 events) and the same defence-in-depth lesson
+- [[advanced-modality-rt-safety]] — the SRS/SBRT calibration and localization accidents extend this accident catalog
+- [[brachytherapy-hdr-safety]] — ICRP Pub 97 / IAEA document the >500 historical HDR brachytherapy accidents this philosophy responds to
 
 ## Open Questions
 

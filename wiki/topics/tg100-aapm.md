@@ -2,7 +2,7 @@
 
 **Type:** Topic
 **Status:** developing
-**Last updated:** 2026-05-24
+**Last updated:** 2026-05-31
 **Sources:** [tg100-aapm-2016]
 
 ## Summary
@@ -34,6 +34,10 @@ The AAPM Task Group 100 report (Huq et al., *Medical Physics*, July 2016) is the
 - [[aapm-tg-suite-linac-qa]] — TG-100 is the risk-based complement to the prescriptive TG suite (TG-142, TG-218); together they cover both risk prioritization and measurement standards
 - [[fmea-advanced-modalities]] — TG-100 FMEA framework applied to MR-linac, adaptive RT, SBRT, proton therapy
 - [[fmea-ai-automated-workflow]] — TG-100 FMEA applied to AI/automated workflow risk assessment
+- [[radiation-safety-culture-healthcare]] — TG-100's risk-based approach requires the organizational safety culture traits (questioning attitude, work processes, continuous learning) to function; the two frameworks are complementary — TG-100 provides the technical method, safety culture provides the behavioral substrate
+- [[advanced-modality-rt-safety]] — TG-100 is the proactive framework the IMRT/SRS-SBRT modality-specific safeguards instantiate
+- [[brachytherapy-hdr-safety]] — ASTRO HDR guidance recommends TG-100 tools for building per-procedure brachytherapy QMPs
+- [[audit-accreditation-radiotherapy]] — TG-100 risk-based QM underlies the SPA "managing change and innovation" section
 
 ## Open Questions
 

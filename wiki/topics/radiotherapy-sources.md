@@ -2,7 +2,7 @@
 
 **Type:** Synthesis
 **Status:** developing
-**Last updated:** 2026-05-24
+**Last updated:** 2026-05-31
 **Sources:** [radiotherapy-sources], [tg100-aapm-2016], [ro-ils-astro-aapm], [who-radiotherapy-risk-profile-2008], [iaea-safety-reports-17-2000], [fmea-jacmp-broggi-2013]
 
 ## Summary
@@ -12,7 +12,7 @@ Five authoritative sources form the core literature on radiotherapy patient qual
 ## Key Facts / Claims
 
 - **TG-100 (AAPM, 2016):** Formal endorsement of process mapping, FMEA, and FTA for radiotherapy QM; introduced RPN scoring and risk-based QM plan design [tg100-aapm-2016]
-- **RO-ILS (ASTRO/AAPM, 2010–present):** National non-punitive incident learning database with >10,000 events; federally protected under PSQIA [ro-ils-astro-aapm]
+- **RO-ILS (ASTRO/AAPM, 2010–present):** National non-punitive incident learning database; 41,516 events from 781 facilities as of end of 2024; federally protected under PSQIA [ro-ils-astro-aapm], [incident-learning-systems-international]
 - **WHO Radiotherapy Risk Profile (2008):** Analyzed 3,125 errors and 4,616 near-misses; mandatory DQA; dosimetry errors most common [who-radiotherapy-risk-profile-2008]
 - **IAEA Safety Reports No. 17 (2000):** Historical accident case studies (Costa Rica, Panama, Poland); SEPAR framework; multi-layer defense-in-depth principle [iaea-safety-reports-17-2000]
 - **Broggi et al. 2013 (JACMP):** Practical FMEA on tomotherapy; 74 failure modes; RPN threshold 125; contouring and CT calibration curve highest-risk stages [fmea-jacmp-broggi-2013]

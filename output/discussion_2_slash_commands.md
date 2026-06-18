@@ -14,12 +14,12 @@ To ensure 100% compatibility across both legacy and modern environments, we impl
 ## 2. Changes Made
 We created the modern skill directories and files, and updated the documentation:
 
-1. **Created Ingest Skill:** [SKILL.md](file:///d:/cowork/QualityRT/.claude/skills/ingest/SKILL.md)
+1. **Created Ingest Skill:** [SKILL.md](../.claude/skills/ingest/SKILL.md)
    - Setup YAML frontmatter detailing triggers and permissions.
    - Incorporated full compilation and index tracking procedures.
-2. **Created Query Skill:** [SKILL.md](file:///d:/cowork/QualityRT/.claude/skills/query/SKILL.md)
+2. **Created Query Skill:** [SKILL.md](../.claude/skills/query/SKILL.md)
    - Setup YAML frontmatter detailing how to search the index, synthesise answers, and cite sources.
-3. **Created Lint Skill:** [SKILL.md](file:///d:/cowork/QualityRT/.claude/skills/lint/SKILL.md)
+3. **Created Lint Skill:** [SKILL.md](../.claude/skills/lint/SKILL.md)
    - Setup YAML frontmatter detailing checking for missing links, orphans, stale stubs, and index drift.
 4. **Updated `README.md`:** Documented the new `.claude/skills/` folder alongside `.claude/commands/`.
 5. **Updated `SCHEMA.md`:** Added a dedicated section detailing how slash commands and custom skills are configured and processed.

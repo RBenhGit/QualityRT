@@ -27,12 +27,12 @@ We searched the web for authoritative standards and literature regarding safety 
 
 ## 2. Dynamic Wiki Ingestion Demonstration
 To show the immediate power of the ContextSpace architecture we built:
-1. We saved the collected research details into a new source file: [raw/radiotherapy-sources.md](file:///d:/cowork/QualityRT/raw/radiotherapy-sources.md).
+1. We saved the collected research details into a new source file: [raw/radiotherapy-sources.md](../raw/radiotherapy-sources.md).
 2. We executed our custom automation runner to compile this new source:
    ```bash
    python workflow.py ingest
    ```
-3. The runner scanned the file, created the new topic page [wiki/topics/radiotherapy-sources.md](file:///d:/cowork/QualityRT/wiki/topics/radiotherapy-sources.md), updated the master catalog [wiki/index.md](file:///d:/cowork/QualityRT/wiki/index.md), and logged the activity in [wiki/log.md](file:///d:/cowork/QualityRT/wiki/log.md).
+3. The runner scanned the file, created the new topic page [wiki/topics/radiotherapy-sources.md](../wiki/topics/radiotherapy-sources.md), updated the master catalog [wiki/index.md](../wiki/index.md), and logged the activity in [wiki/log.md](../wiki/log.md).
 
 This proves the entire end-to-end ContextSpace compilation workflow is 100% active, robust, and ready for clinical subject curation.
 
