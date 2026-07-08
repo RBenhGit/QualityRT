@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>דיון 7 · סטטיסטיקות מערכת הלמידה המחלקתית</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#0e1420; --panel:#161f2e; --panel2:#1d2838;
+    --ink:#eaf1f8; --muted:#93a3b8; --line:#28374b;
+    --a:#4aa3ff; --b:#37c66f; --c:#e0a72b; --d:#b58bff; --e:#ff6f9c; --warn:#f0883e;
+    --shadow:0 10px 34px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box}
+  body{margin:0; color:var(--ink); background:
+    radial-gradient(1100px 640px at 85% -8%, #12345522, transparent),
+    radial-gradient(900px 560px at -5% 0%, #3a1f5522, transparent), var(--bg);
+    font-family:"Segoe UI",Arial,"Noto Sans Hebrew",sans-serif; line-height:1.6; padding-bottom:60px}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 20px}
+  header.hero{text-align:center; padding:52px 16px 24px}
+  .badge{display:inline-block; font-size:.78rem; letter-spacing:.4px; color:var(--a);
+    border:1px solid var(--line); border-radius:999px; padding:5px 14px; background:#0f1a2b}
+  h1{font-size:2.3rem; margin:16px 0 6px; line-height:1.2}
+  h1 .grad{background:linear-gradient(90deg,var(--a),var(--b)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .sub{color:var(--muted); max-width:760px; margin:0 auto; font-size:1.05rem}
+  .meta{color:var(--muted); font-size:.85rem; margin-top:10px}
+
+  section{margin-top:42px}
+  .h2{display:flex; align-items:center; gap:10px; font-size:1.4rem; margin:0 0 16px}
+  .h2 .dot{width:12px;height:12px;border-radius:50%}
+
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+  .kpi{background:linear-gradient(180deg,#141d2b,#0f1622); border:1px solid var(--line);
+    border-radius:16px; padding:20px 14px; text-align:center; box-shadow:var(--shadow)}
+  .kpi .big{font-size:2rem; font-weight:800}
+  .kpi.a .big{color:var(--a)} .kpi.b .big{color:var(--b)} .kpi.c .big{color:var(--c)} .kpi.d .big{color:var(--d)}
+  .kpi .lbl{color:var(--muted); font-size:.85rem; margin-top:4px}
+
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px; box-shadow:var(--shadow)}
+  .chart-box{position:relative; height:340px}
+  .chart-box.tall{height:520px}
+  .note{color:var(--muted); font-size:.86rem; margin-top:12px; border-inline-start:3px solid var(--c); padding:6px 14px; background:#1a1608aa; border-radius:8px}
+
+  .grid2{display:grid; grid-template-columns:1.3fr 1fr; gap:18px}
+  .insights{list-style:none; margin:0; padding:0}
+  .insights li{padding:10px 0; border-bottom:1px solid var(--line); color:#cdd9e6; font-size:.95rem}
+  .insights li:last-child{border-bottom:none}
+  .insights b{color:var(--ink)}
+
+  .callout{background:#1b1310; border:1px solid #4a3520; border-radius:14px; padding:16px 18px; color:#f2d9bf}
+  .callout h3{margin:0 0 6px; color:var(--warn); font-size:1.05rem}
+
+  .gaps{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  .gap{background:var(--panel2); border:1px solid var(--line); border-radius:12px; padding:14px}
+  .gap .st{font-weight:700}
+  .gap.ok .st{color:var(--b)} .gap.open .st{color:var(--e)}
+  .gap p{margin:6px 0 0; color:var(--muted); font-size:.9rem}
+
+  footer{margin-top:48px; text-align:center; color:var(--muted); font-size:.82rem}
+  @media(max-width:820px){ .kpis{grid-template-columns:repeat(2,1fr)} .grid2{grid-template-columns:1fr} .gaps{grid-template-columns:1fr} h1{font-size:1.8rem} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="badge">דיון 7 · דוח סטטיסטיקות</span>
+    <h1><span class="grad">מערכת הלמידה המחלקתית</span> — Incident Reporting</h1>
+    <p class="sub">ריכוז סטטיסטיקות ממאגר הדיווחים המחלקתי: מגמת דיווחים רבעונית ושכיחות מילון המונחים (Taxonomy) המלא.</p>
+    <div class="meta">תאריך: 2026-07-08 · מקור: <code>raw/Incident reporting.xlsx</code> · רמת ביטחון: גבוהה</div>
+  </header>
+
+  <!-- KPIs -->
+  <section>
+    <div class="kpis">
+      <div class="kpi a"><div class="big">871</div><div class="lbl">דיווחים בפועל (86% מ-1,014)</div></div>
+      <div class="kpi b"><div class="big">833</div><div class="lbl">עבודה שוטפת (מ-2017-Q4)</div></div>
+      <div class="kpi c"><div class="big">38</div><div class="lbl">הזנה רטרוספקטיבית</div></div>
+      <div class="kpi d"><div class="big">143</div><div class="lbl">מספרים שמורים — ללא דיווח</div></div>
+    </div>
+  </section>
+
+  <!-- Reserved vs reports donut + explanation -->
+  <section>
+    <h2 class="h2"><span class="dot" style="background:var(--a)"></span>מבנה המאגר: 1,014 מספרים סידוריים</h2>
+    <div class="grid2">
+      <div class="card"><div class="chart-box"><canvas id="donut"></canvas></div></div>
+      <div class="card">
+        <ul class="insights">
+          <li><b>שורה נחשבת דיווח</b> אם קיים בה מועד פגיעה או מועד דיווח (מספיק אחד מהשניים).</li>
+          <li><b>871 (86%)</b> הם דיווחים אמיתיים; <b>143 (14%)</b> מספרים שמורים מראש שמעולם לא נוצל עבורם דיווח.</li>
+          <li>המערכת <b>לא הייתה קיימת לפני אוקטובר 2017</b> — 38 הדיווחים הישנים הוזנו רטרוספקטיבית ואינם בני-השוואה למגמה השוטפת.</li>
+          <li>עקביות פנימית: 871 תואם את מדגם ציוני החומרה (n≈870/871).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quarterly trend -->
+  <section>
+    <h2 class="h2"><span class="dot" style="background:var(--b)"></span>טבלה 1 · דיווחים לפי רבעון</h2>
+    <div class="card">
+      <div class="chart-box"><canvas id="quarterly"></canvas></div>
+      <div class="note">רבעונים בכתום = תקופת ההזנה הרטרוספקטיבית (2015-Q1–2017-Q3, 38 דיווחים) — אינם ניתנים להשוואה ישירה לתקופת העבודה השוטפת (ירוק, 2017-Q4 ואילך, 833 דיווחים).</div>
+    </div>
+  </section>
+
+  <!-- Annual trend -->
+  <section>
+    <h2 class="h2"><span class="dot" style="background:var(--c)"></span>סיכום שנתי (871 דיווחים)</h2>
+    <div class="card">
+      <div class="chart-box"><canvas id="annual"></canvas></div>
+      <div class="note">2015–2017 (מקווקו) כוללים חודשי הזנה רטרוספקטיבית. שיא נפח ב-2022 ו-2025 (130 כל אחת). מגמת עלייה הדרגתית עם תנודתיות מ-2017-Q4 ואילך.</div>
+    </div>
+  </section>
+
+  <!-- Taxonomy -->
+  <section>
+    <h2 class="h2"><span class="dot" style="background:var(--d)"></span>טבלה 2 · שכיחות מילון המונחים (799 אזכורים)</h2>
+    <div class="grid2">
+      <div class="card"><div class="chart-box tall"><canvas id="taxonomy"></canvas></div></div>
+      <div class="card">
+        <ul class="insights">
+          <li><b>תיעוד לקוי + היעדר תיעוד = 194 אזכורים (24.3%)</b> — האשכול הגדול ביותר.</li>
+          <li><b>4 המובילים = 46.1%</b> מכלל האזכורים: תיעוד, תקשורת לקויה, טיפול שגוי, העברת מידע.</li>
+          <li><b>זנב ארוך ודליל:</b> 15 מתוך 40 מילות מפתח (38%) הן ≤0.5% כל אחת — תופעות נדירות וחד-פעמיות.</li>
+          <li>41 מילות מפתח בסך הכל, 799 אזכורים מתויגים.</li>
+        </ul>
+        <div class="callout" style="margin-top:14px">
+          <h3>⚠ פער לא מוסבר</h3>
+          סדרת "results new" מול הלוג הגולמי תואמת ברוב השנים (&lt;1%), אך <b>2019 חורגת ב-27%</b> (93 מול 68). הסדרה מהלוג הגולמי משמשת לאורך הדוח כי היא הניתנת ביותר לביקורת.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Five gaps -->
+  <section>
+    <h2 class="h2"><span class="dot" style="background:var(--e)"></span>מענה לחמשת הפערים הפתוחים</h2>
+    <div class="gaps">
+      <div class="gap ok"><div class="st">✓ נסגר · 143 מספרים "חסרים"</div><p>שמורים מראש בלבד — אין להם דיווח קיים כלל.</p></div>
+      <div class="gap ok"><div class="st">✓ נסגר · לפני אוקטובר 2017</div><p>המערכת לא הייתה קיימת/בשימוש; ההזנה רטרוספקטיבית.</p></div>
+      <div class="gap ok"><div class="st">✓ נסגר · הכללת כל הדיווחים</div><p>כלל מועד-פגיעה-או-דיווח מאושר; אין שינוי נדרש.</p></div>
+      <div class="gap ok"><div class="st">✓ נסגר · שיאי Q1 (2022, 2025)</div><p>לא היה דיווח מנהלי מרוכז; השערת הדרכות מודעות לא אוששה.</p></div>
+      <div class="gap open"><div class="st">◐ פתוח · פערי אחוזים שנתיים</div><p>2017 (+4%), 2018 (+9%), 2021 (+10%), 2019 (+27%) — לא הוסברו.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    דיון 7 · מערכת הלמידה המחלקתית · הנתונים חולצו ישירות מגיליונות "Incident Reporting" ו-"Taxonomy" ללא אקסטרפולציה<br>
+    עמוד wiki: departmental-incident-reporting-dataset-il
+  </footer>
+</div>
+
+<script>
+Chart.defaults.color = '#93a3b8';
+Chart.defaults.font.family = 'Segoe UI, Arial, sans-serif';
+const GRID = '#28374b';
+
+// Donut: reports vs reserved
+new Chart(document.getElementById('donut'), {
+  type:'doughnut',
+  data:{ labels:['עבודה שוטפת (833)','רטרוספקטיבי (38)','שמורים ללא דיווח (143)'],
+    datasets:[{ data:[833,38,143], backgroundColor:['#37c66f','#f0883e','#3a4761'], borderColor:'#0e1420', borderWidth:3 }]},
+  options:{ plugins:{legend:{position:'bottom', labels:{padding:14}}}, cutout:'58%' }
+});
+
+// Quarterly data
+const qLabels = ['2015-Q1','2015-Q2','2015-Q3','2015-Q4','2016-Q2','2016-Q3','2016-Q4','2017-Q1','2017-Q2','2017-Q3','2017-Q4','2018-Q1','2018-Q2','2018-Q3','2018-Q4','2019-Q1','2019-Q2','2019-Q3','2019-Q4','2020-Q1','2020-Q2','2020-Q3','2020-Q4','2021-Q1','2021-Q2','2021-Q3','2021-Q4','2022-Q1','2022-Q2','2022-Q3','2022-Q4','2023-Q1','2023-Q2','2023-Q3','2023-Q4','2024-Q1','2024-Q2','2024-Q3','2024-Q4','2025-Q1','2025-Q2','2025-Q3','2025-Q4','2026-Q1','2026-Q2'];
+const qVals   = [6,3,5,3,4,2,2,2,10,1,11,16,21,15,14,40,15,20,18,17,12,15,11,24,27,25,24,44,35,25,26,27,24,26,13,17,28,41,29,45,43,21,21,19,24];
+const retro = 10; // first 10 quarters are retrospective (up to 2017-Q3)
+const qColors = qVals.map((_,i)=> i<retro ? '#f0883e' : '#37c66f');
+
+new Chart(document.getElementById('quarterly'), {
+  type:'bar',
+  data:{ labels:qLabels, datasets:[{ data:qVals, backgroundColor:qColors, borderRadius:3 }]},
+  options:{ plugins:{legend:{display:false}, tooltip:{callbacks:{afterLabel:(c)=> c.dataIndex<retro?'הזנה רטרוספקטיבית':'עבודה שוטפת'}}},
+    scales:{ x:{grid:{display:false}, ticks:{maxRotation:90, minRotation:90, font:{size:9}}}, y:{grid:{color:GRID}, beginAtZero:true} } }
+});
+
+// Annual
+new Chart(document.getElementById('annual'), {
+  type:'line',
+  data:{ labels:['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026*'],
+    datasets:[{ data:[17,8,24,66,93,55,100,130,90,115,130,43], borderColor:'#e0a72b',
+      backgroundColor:'rgba(224,167,43,.15)', fill:true, tension:.3, pointRadius:5, pointBackgroundColor:'#e0a72b',
+      segment:{ borderDash: ctx => ctx.p0DataIndex < 2 ? [6,4] : undefined } }]},
+  options:{ plugins:{legend:{display:false}, tooltip:{callbacks:{afterLabel:(c)=> c.dataIndex<3?'כולל הזנה רטרוספקטיבית': (c.dataIndex===11?'חלקי עד מאי':'')}}},
+    scales:{ x:{grid:{display:false}}, y:{grid:{color:GRID}, beginAtZero:true} } }
+});
+
+// Taxonomy top 15
+const txLabels = ['תיעוד לא תקין','תקשורת לקויה','מתן טיפול שגוי','העברת מידע','תכנון שגוי','אי עמידה בזמנים','סריקה לא תקינה','היעדר תיעוד','עבודה שלא לפי נוהל','כמעט טיפול שגוי','שגיאת זיהוי מטופל','זימון תור לא מספק','תיק חסר אישורים','אי ביצוע הנחיה (צוות)','טיפול שלא לפי פרוטוקול'];
+const txVals = [157,74,69,69,56,54,53,37,25,22,19,12,12,12,11];
+new Chart(document.getElementById('taxonomy'), {
+  type:'bar',
+  data:{ labels:txLabels, datasets:[{ data:txVals,
+    backgroundColor:txVals.map((v,i)=> i<4 ? '#b58bff' : '#4a5b78'), borderRadius:3 }]},
+  options:{ indexAxis:'y', plugins:{legend:{display:false},
+    tooltip:{callbacks:{label:(c)=> c.raw + ' אזכורים (' + (c.raw/799*100).toFixed(1) + '%)'}}},
+    scales:{ x:{grid:{color:GRID}, beginAtZero:true}, y:{grid:{display:false}, ticks:{font:{size:11}}} } }
+});
+</script>
+</body>
+</html>

@@ -148,7 +148,7 @@ Community case studies & safety notices
 |---|---|---|---|
 | 2000 | IAEA Safety Reports No. 17 | Retrospective | SEPAR; defense-in-depth; accident case studies |
 | 2008 | WHO Radiotherapy Risk Profile | Retrospective | 3,125 errors analyzed; mandatory DQA |
-| 2010 | RO-ILS launched | Continuous | National U.S. non-punitive learning system |
+| 2010 | RO-ILS initiated (ASTRO/AAPM "Call to Action") | Continuous | National U.S. non-punitive learning system; actually launched/went live June 19, 2014 — see [[ro-ils]] |
 | 2013 | Broggi et al. (JACMP) | Practical | FMEA on tomotherapy; RPN >125 threshold |
 | 2016 | AAPM TG-100 | Prospective | Formal endorsement of process mapping + FMEA + FTA |
 

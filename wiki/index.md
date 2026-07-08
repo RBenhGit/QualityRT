@@ -5,7 +5,7 @@ Master catalog of all pages. Updated automatically on every ingest.
 | Page | Type | Status | Summary |
 |---|---|---|---|
 | [aapm-tg-suite-linac-qa](topics/aapm-tg-suite-linac-qa.md) | Topic | developing | A suite of AAPM Task Group reports governs equipment-focused quality assuranc... |
-| [discussion-1-setup](topics/discussion-1-setup.md) | Topic | stub | Automatically compiled stub page representing research findings from the raw ... |
+| [discussion-1-setup](topics/discussion-1-setup.md) | Topic | developing | Records the initial setup session for this QualityRT wiki repository: cloning... |
 | [fmea-advanced-modalities](topics/fmea-advanced-modalities.md) | Topic | developing | FMEA has been successfully applied to advanced radiotherapy modalities includ... |
 | [fmea-ai-automated-workflow](topics/fmea-ai-automated-workflow.md) | Topic | developing | As AI-based contouring, automated treatment planning, and fully automated rad... |
 | [fmea-radiotherapy](topics/fmea-radiotherapy.md) | Topic | developing | Failure Mode and Effects Analysis (FMEA) is a proactive, bottom-up risk asses... |
@@ -30,8 +30,9 @@ Master catalog of all pages. Updated automatically on every ingest.
 | [advanced-modality-rt-safety](topics/advanced-modality-rt-safety.md) | Topic | mature | Safety in advanced external-beam modalities (IMRT, SRS/SBRT) per the ASTRO Target Safely white papers: commissioning, small-field dosimetry, forced time-outs... |
 | [brachytherapy-hdr-safety](topics/brachytherapy-hdr-safety.md) | Topic | mature | Brachytherapy/HDR safety: NRC-regulated, statistically very safe but dominated by human "length" failures; the ASTRO HDR QM white paper and NRC event analysis... |
 | [rt-accidents-aviation-lessons](topics/rt-accidents-aviation-lessons.md) | Topic | mature | Canonical RT accident case studies (Exeter, Glasgow, North Staffordshire, NY) and adapted aviation safety-management-system concepts (investment, human factors, SMS)... |
+| [departmental-incident-reporting-dataset-il](topics/departmental-incident-reporting-dataset-il.md) | Topic | developing | A bilingual Hebrew/English departmental incident-reporting Excel database with 1,014 individually logged incidents spanning 2004–2026... |
 
 ---
 
-*Last updated: 2026-06-18*
-*Total pages: 26*
+*Last updated: 2026-07-08*
+*Total pages: 27*

@@ -2,8 +2,8 @@
 
 **Type:** Topic
 **Status:** mature
-**Last updated:** 2026-06-18
-**Sources:** [incident-learning-systems-international], [ford-ils-consensus-2012], [nyflot-ils-metrics-2015], [kim-ils-tbi-impact-2017], [rosis-cunningham-2010], [clark-5yr-incident-learning-2013], [pawlicki-ils-levels-2017]
+**Last updated:** 2026-07-08
+**Sources:** [incident-learning-systems-international], [ford-ils-consensus-2012], [nyflot-ils-metrics-2015], [kim-ils-tbi-impact-2017], [rosis-cunningham-2010], [clark-5yr-incident-learning-2013], [pawlicki-ils-levels-2017], [incident-reporting-xlsx-il]
 
 ## Summary
 
@@ -24,20 +24,96 @@ Multiple national and international incident learning systems (ILS) exist for ra
 - ROSIS documented a **near-incident-to-incident ratio of 13.8:1** for treatment-preparation errors (Holmberg & McClean), underscoring large under-reporting of near misses [rosis-cunningham-2010]
 - Participating departments used an average of **7 QA/QC methods ("defence-in-depth")**; least common were in-vivo dosimetry (34%) and formal quality management systems (35%) [rosis-cunningham-2010]
 - "Working with awareness" (vigilant staff) detected as many incidents as chart-check + in-vivo dosimetry + portal imaging combined — a core safety-culture behaviour [rosis-cunningham-2010]
-- **SAFRON (Safety in Radiation Oncology):** IAEA-launched December 2012; global scope; >50 registered facilities worldwide; >1,300 reports; developed by some of the same people as ROSIS [incident-learning-systems-international]
+- **SAFRON ("Safety Reporting and Learning System for Radiotherapy," IAEA Division of Nuclear Safety & Security — see [pawlicki-ils-levels-2017] below for the authoritative expansion):** IAEA-launched December 2012; global scope; >50 registered facilities worldwide; >1,300 reports; developed by some of the same people as ROSIS [incident-learning-systems-international]
 - **UK NRLS:** NHS-administered, national but not RT-specific; less detailed for radiation oncology than RO-ILS [incident-learning-systems-international]
 - **Canada NSIR-RT / CARS-PSO:** Developed following AAPM 2012 Work Group on Prevention of Errors report (same report that informed RO-ILS) [incident-learning-systems-international]
 - **Australia/New Zealand:** RANZCR has explored centralized reporting; national system in development as of 2022 [incident-learning-systems-international]
 - **Ford 2018 review** (*Medical Physics*): most comprehensive comparative analysis of global RT incident learning systems [incident-learning-systems-international]
+- A real departmental incident-reporting dataset (Israel, bilingual Hebrew/English, 1,014 records, 2004–2026) independently converged on a nearly identical field structure to the AAPM consensus Reporter's form (18 fields), a dual medical/dosimetric severity scale, and a keyword taxonomy explicitly crosswalked to RO-ILS/AAPM causal-factor English terminology — see [[departmental-incident-reporting-dataset-il]] for full detail [incident-reporting-xlsx-il]
 
 ### ILS database structure (AAPM consensus, Ford et al. 2012)
-- The **AAPM Work Group on the Prevention of Errors (WGPE)** produced consensus recommendations for RT incident-learning database structures (workshop April 2011, Washington DC; published *Med Phys* 2012); reviewed/approved by AAPM, ASTRO, and SROA [ford-ils-consensus-2012]
-- Five standardized components: **definitions, process maps, severity scales, causal taxonomy, and data elements** [ford-ils-consensus-2012]
-- Consensus **process maps** define **91 process steps for EBRT and 88 for brachytherapy**, with **35 (EBRT) / 32 (brachytherapy) "safety barriers"** (critical control points) — steps whose primary function is to stop an error propagating [ford-ils-consensus-2012]
-- Two complementary **severity scales**: a 10-level medical severity scale (0 = no harm to 10 = premature death) and a separate dosimetric-deviation scale (<5% to >100% of prescribed dose) [ford-ils-consensus-2012]
-- Causal taxonomy organizes root causes into six top-level categories: organizational management, technical, human behavior, patient-related, external factors, and procedural issues [ford-ils-consensus-2012]
-- Recommends a **three-level workflow** (report → analysis → follow-up) and compatibility with ROSIS, SAFRON, AHRQ Common Formats, and the National Radiation Oncology Registry (NROR) [ford-ils-consensus-2012]
-- These consensus structures are the basis for RO-ILS and several departmental systems [ford-ils-consensus-2012]
+- The **AAPM Work Group on the Prevention of Errors (WGPE)** produced consensus recommendations for RT incident-learning database structures (workshop April 14–15, 2011, Washington DC; published *Med Phys* 2012); reviewed/approved by AAPM, ASTRO, and SROA [ford-ils-consensus-2012]
+- Participation from ASTRO, ACR, NIH, CRCPD, AAMD, ASRT, COMP, and Dr. Ola Holmberg (core ROSIS/SAFRON architect) — broad North American consensus with deliberate international compatibility [ford-ils-consensus-2012]
+- Five standardized structural components: **definitions, process maps, severity scales, causal taxonomy, and data elements** [ford-ils-consensus-2012]
+
+#### Functional Requirements (Table I — ranked by priority)
+The consensus paper defines 14 key functional requirements for any ILS, in approximate priority order [ford-ils-consensus-2012]:
+
+| Priority | Requirement | Notes |
+|---|---|---|
+| 1 | **Electronic** | Ease of use; data mining; interconnectivity |
+| 2 | **Ease of use** | Especially for front-line reporters; target <1 min entry |
+| 3 | **Provide feedback** | To both the clinic and the person reporting |
+| 4 | **Compliant with standard** | Supports extra-institutional data sharing |
+| 5 | **Validated with test-case scenarios** | Test cases also useful for training users |
+| 6 | **Statistical analysis & filtering** | Filtering by process map step, cause, and other fields |
+| 7 | **Support for near-miss incidents** | Near-misses are the primary learning signal |
+| 8 | **Tools for incident investigation** | RCA structures, severity tagging |
+| 9 | **Semi-anonymous reporting** | Option must exist; rarely used = sign of good culture |
+| 10 | **Corrective action tracking** | Management system for tracking follow-up |
+| 11 | **Multisite support** | For national/international distributed systems |
+| 12 | **Workflow tools** | Alerts to managers, escalation pages |
+| 13 | **Secure communication tools** | Tools for communicating between users |
+| 14 | **Clear reporting threshold** | Ensure consistency in what is considered reportable |
+
+#### Process Maps
+- Consensus **process maps** define **91 process steps for EBRT and 88 for brachytherapy**, across 8 phases: patient assessment → imaging for RT planning → treatment planning → pre-treatment review and verification → treatment delivery → on-treatment QM → post-treatment completion → equipment/software QM [ford-ils-consensus-2012]
+- **35 (EBRT) / 32 (brachytherapy) "safety barriers"** (SBs) are identified within those steps — process steps whose primary function is to stop an error from occurring or propagating [ford-ils-consensus-2012]
+- Key SBs include: patient ID verification (dual method), pathology report review, peer review of treatment decision (tumor board), independent dose calculation, IMRT QA, time-out at treatment delivery, image-guided verification, in-vivo dosimetry, weekly physics/physician/therapist chart checks [ford-ils-consensus-2012]
+- Process map differs from TG-100's IMRT process tree: the most notable difference is the explicit labeling of safety barriers — deliberately excluded from TG-100 because FMEA handles barriers through the detectability score [ford-ils-consensus-2012]
+
+#### Severity Scales (Two Complementary Scales)
+**Medical severity scale (0–10):**
+
+| Score | Consequence |
+|---|---|
+| 10 | Premature death |
+| 8/9 | Life-threatening — intervention essential; possible recurrence from underdose |
+| 7 | Permanent major disability (or grade 3/4 permanent toxicity) |
+| 5/6 | Permanent minor disability (or grade 1/2 permanent toxicity) |
+| 3/4 | Temporary side effects — major treatment/hospitalization |
+| 2 | Temporary side effects — intervention indicated |
+| 1 | Temporary side effects — intervention not indicated |
+| 0 | No harm |
+
+**Dosimetric deviation scale (1–10):**
+
+| Score | Dose Deviation |
+|---|---|
+| 9/10 | >100% absolute deviation from total prescription to any structure |
+| 7/8 | >25–100% absolute deviation |
+| 5/6 | >10–25% absolute deviation |
+| 3/4 | >5–10% absolute deviation |
+| 1/2 | <5% absolute deviation |
+
+- Both scales must be assigned for every incident — large dosimetric deviation can have minor clinical consequence and vice versa; the two scales must never be conflated [ford-ils-consensus-2012]
+- An additional **Clinical Action Scale (A–D)** guides follow-up priority independently of severity: A = highest priority (notify senior management, supervisor, physician immediately); B–D = decreasing urgency. Some low-severity incidents (e.g., wrong MRN entry) receive high action scores due to downstream cascade risk [ford-ils-consensus-2012]
+
+#### Causal Taxonomy (Six Top-Level Categories)
+The taxonomy is designed to be used by individuals with varied expertise; robustness, ease of use, and inter-system mappability are the four design criteria [ford-ils-consensus-2012]:
+
+| Category | Key Subcategories |
+|---|---|
+| **1. Organizational management** | Staffing, capital resources, policies/procedures, training, communication, physical environment, leadership/safety culture |
+| **2. Technical** | Acceptance testing/commissioning, equipment design, maintenance failures, IT/environment |
+| **3. Human behavior** | Acting outside scope, slip, poor judgment, language issues, intentional violations, negligence |
+| **4. Patient-related** | Misleading representation, cognitive/language issues, non-compliance, physical inability |
+| **5. External factors** | Natural environment, hazards (beyond facility control) |
+| **6. Procedural issues** | Failure to detect, interpret, select correct rule, develop effective plan, or execute plan |
+
+- Root-cause analysis pitfalls explicitly named: (1) blaming an individual as the only cause; (2) focusing exclusively on staffing; (3) focusing too heavily on policies/procedures in isolation — all have weak impact on behavior [ford-ils-consensus-2012]
+
+#### Three-Level Data Element Structure
+- **Level 1 — Reporter's form**: 18 elements; completed by front-line reporter; designed for <1 minute entry; includes date, incident type (actual/near-miss/unsafe), person affected, fractions delivered incorrectly, narrative description, where found, treatment modality [ford-ils-consensus-2012]
+- **Level 2 — Analyst's form**: 38 elements; completed by a second investigator; includes medical/dosimetric severity, causal taxonomy, process step of origin, equipment/system details, staff roles, patient demographics [ford-ils-consensus-2012]
+- **Level 3 — Responder's form**: 7 elements; completed as part of follow-up; tracks safety barriers that prevented/failed to prevent propagation, corrective action, preventive action, learning actions, closure [ford-ils-consensus-2012]
+- Elements flagged as "Required," "Recommended," or "Optional"; data to be shared across institutions requires stripping/encrypting patient-identifying fields [ford-ils-consensus-2012]
+
+#### Operational Recommendations
+- A **written policy** must govern ILS operations; one person must be identified as responsible for initial report review [ford-ils-consensus-2012]
+- **Investigation timelines**: serious incidents → initial investigation by next business day (involving individual, domain members, supervisor, senior management); minor incidents/near-misses → within 10 working days [ford-ils-consensus-2012]
+- **Aviation analogy**: CAST (Commercial Aviation Safety Team) reduced fatal accident risk by 73% in 10 years through systematic investigation of crashes and near-misses — the model for radiation oncology ILS [ford-ils-consensus-2012]
+- These consensus structures are the direct basis for RO-ILS and several national/departmental systems [ford-ils-consensus-2012]
 
 ### Departmental ILS impact & metrics (Univ. of Washington)
 - A departmental near-miss ILS logged **1,897 reports over 2 years (1.0 report/patient)** — far higher volume than most prior RT systems, reflecting a strong reporting culture [nyflot-ils-metrics-2015]
@@ -91,6 +167,7 @@ Multiple national and international incident learning systems (ILS) exist for ra
 - [[tg100-aapm]] — the consensus ILS process maps parallel (but differ from) the TG-100 IMRT process tree; TG-100 omits "safety barriers" because FMEA handles barriers via the detectability score
 - [[rt-accidents-aviation-lessons]] — incident learning's rationale (Heinrich 1:30:300) and the critique of counting reports vs. learning
 - [[brachytherapy-hdr-safety]] — the NRC brachytherapy event database is a mandatory incident-reporting complement to voluntary ILS
+- [[departmental-incident-reporting-dataset-il]] — a real, primary-source departmental ILS dataset (1,014 incidents, 2004–2026) whose structure closely parallels the AAPM/Ford consensus recommendations documented on this page
 
 ## Open Questions
 

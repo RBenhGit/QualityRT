@@ -88,6 +88,7 @@ Radiation safety culture in healthcare is the assembly of characteristics and at
 - [[regulatory-framework-rt-usa]] — Trait 9 (SCWE) has legal backing in US regulatory law; organizations are prohibited from retaliating against employees who raise safety concerns
 - [[audit-accreditation-radiotherapy]] — the AAPM SPA found institutional *culture* lagging behind technical compliance — culture is the harder, slower task to build
 - [[rt-accidents-aviation-lessons]] — just/no-blame culture and leadership-set safety standards are central to both the aviation SMS and accident-lesson reviews
+- [[departmental-incident-reporting-dataset-il]] — sustained, rising incident-report volume (2015–2025) in this real departmental dataset is a measurable proxy for Trait 9 (Environment for Raising Concerns) taking hold
 - [[peer-review-radiotherapy]] — effective peer review requires an open, just culture where questioning each other is normalized
 
 ## Open Questions

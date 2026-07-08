@@ -108,6 +108,7 @@ Human factors — including supervision quality, staffing levels, fatigue, commu
 - [[rt-accidents-aviation-lessons]] — the same human-factors core (SHEL/SHELL, just culture, system-not-individual) and aviation CRM lineage
 - [[advanced-modality-rt-safety]] — "forced time-outs," halt-authority, and the time-pressure hazard recur in the IMRT/SRS-SBRT white papers
 - [[brachytherapy-hdr-safety]] — human error caused 97/147 NRC brachytherapy events; persistent wrong-patient/wrong-side failures are human-factors targets
+- [[departmental-incident-reporting-dataset-il]] — primary-source departmental data where work culture, human error, and communication together account for 95% of primary causes and a third of events are multi-factorial, corroborating this page's causal-factor findings
 
 ## Open Questions
 
