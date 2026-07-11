@@ -2,8 +2,8 @@
 
 **Type:** Topic
 **Status:** mature
-**Last updated:** 2026-06-18
-**Sources:** [human-factors-rt-safety], [chera-normal-accident-theory-2015], [marks-swiss-cheese-2015], [thompson-hazard-detection-education-2017], [mosaly-hfacs-reliability-2015], [gao-emergent-treatments-2015], [evans-causal-factors-2017], [gensheimer-planning-time-2016], [spraker-causal-taxonomy-2017], [walker-incident-factors-2015], [mazur-workload-2013], [mullen-nmri-reliability-2016], [dominello-10yr-qa-2015]
+**Last updated:** 2026-07-11
+**Sources:** [human-factors-rt-safety], [chera-normal-accident-theory-2015], [marks-swiss-cheese-2015], [thompson-hazard-detection-education-2017], [mosaly-hfacs-reliability-2015], [gao-emergent-treatments-2015], [evans-causal-factors-2017], [gensheimer-planning-time-2016], [spraker-causal-taxonomy-2017], [walker-incident-factors-2015], [mazur-workload-2013], [mullen-nmri-reliability-2016], [dominello-10yr-qa-2015], [rt-safety-shield-pptx], [rt-safety-shield-traits-pptx]
 
 ## Summary
 
@@ -24,9 +24,27 @@ Human factors — including supervision quality, staffing levels, fatigue, commu
 - "Failures in communication, leadership, and decision-making in a culture of retribution are known factors contributing to adverse outcomes" [human-factors-rt-safety]
 - **Automation introduces new human factor risks**: skill degradation and automation bias (see [[fmea-ai-automated-workflow]]) [human-factors-rt-safety]
 
+### Local departmental safety data (Israeli RT department, 2015–2017)
+- **93% of radiotherapy errors are caught before they reach the patient** — captured at pre-treatment verification steps (physics plan review, chart check, time-out) [rt-safety-shield-pptx]
+- Error distribution by category included: prescription/planning, imaging, data transfer, treatment delivery, and technical/equipment failures; near-misses (caught before patient contact) vastly outnumber actual incidents [rt-safety-shield-pptx]
+- The 93% catch rate validates the Swiss Cheese defence-in-depth model: multiple independent barrier layers intercept errors that penetrate the first layer [rt-safety-shield-pptx]
+- **Root-cause breakdown of a 36-event categorized sub-sample (same 2015–2017 tracking period):** poor cross-team communication was the leading root cause (31%), followed by human error during the planning stage (27%) and missing/incorrect documentation (19%); zero events were attributed to equipment damage, staff shortage, inter-professional non-cooperation, or software faults [rt-safety-shield-traits-pptx]
+- **Stage-of-occurrence for the same 36-event sample:** the large majority (23/36, ≈64%) occurred during the treatment-delivery stage itself, vs. 5/36 (≈14%) each at planning and pre-treatment, and only 1/36 each at intake, physics, and discharge — none at positioning, beam-crossing/verification, or patient-movement stages. This describes where in the workflow events *occurred*, distinct from the pre-treatment steps where most are *caught* [rt-safety-shield-traits-pptx]
+
+### "Clinical Safety Shield" — named integrated framework
+- The **Clinical Safety Shield** names the integration of four complementary safety mechanisms: (1) proactive risk analysis (FMEA), (2) Swiss Cheese defence layers (safety culture → procedures/QA → physics checks → clinical review/time-out), (3) incident learning (ILS/near-miss reporting), and (4) Just Culture philosophy [rt-safety-shield-pptx]
+- The Swiss Cheese four-layer model in RT: **Layer 1** — safety culture and proactive routines; **Layer 2** — procedures and treatment planning QA; **Layer 3** — physics checks (independent verification); **Layer 4** — clinical review (time-out, physician sign-off) [rt-safety-shield-pptx]
+- When barriers "align" (holes line up), an error propagates to the patient; the goal is never to eliminate individual layers (that is impractical) but to ensure layers are independent and robust [rt-safety-shield-pptx]
+- The framework was implemented in a department and tracked from 2015–2017, yielding the 93% pre-patient catch rate cited above [rt-safety-shield-pptx]
+
+### Critical treatment chain (5-role harmonized responsibility)
+- Treatment is framed as a **critical chain**, not a single act: a linear accelerator sits at the center of five interdependent role groups — **physicians** (decision, prescription, approval), **physicists** (planning, calibration, quality control), **radiographers/technologists** (simulation, treatment delivery, follow-up), **nurses and records staff** (intake, documentation, monitoring), and **engineers** (equipment maintenance and upkeep) [rt-safety-shield-traits-pptx]
+- A failure introduced at any single link in the chain can echo forward through every downstream link — the same "linear/tightly-coupled" failure-propagation logic as Normal Accident Theory, applied here to role handoffs rather than process steps [rt-safety-shield-traits-pptx], [chera-normal-accident-theory-2015]
+
 ### Safety-engineering frameworks borrowed from industry
 - **Reason's Swiss Cheese Model (1990):** accidents result when latent failures penetrate successive defensive layers — *organizational → workplace → people → action*; focusing only on individual behavior (incentives/discipline) is a poor strategy because **suboptimally designed layers themselves promote accidents** [marks-swiss-cheese-2015]
 - **Hierarchy of effectiveness** (most→least reliable): forcing functions/constraints and automation (technology-focused, "the right thing happens naturally") > simplification/standardization > reminders/checklists/double-checks > rules/policies > training/education (least effective but most-often used) — this is the same ranking used by Clark and the Joint Commission reliability schema [marks-swiss-cheese-2015]
+- A local departmental training deck renders this same hierarchy as an explicit 6-tier pyramid with **personal vigilance as its own base tier below education** (Personal Vigilance → Education → Checklists → Standardization → Automation → Forcing Functions/Interlocks at the apex), framing the goal as pushing risk solutions "as high as possible" up the pyramid — personal vigilance is named as necessary but "most exposed to error" [rt-safety-shield-traits-pptx]
 - **Adding process steps (e.g. another checklist) can be *detrimental*** — they cost time and add complexity that can itself raise error risk; interventions should be adopted only if they add value [marks-swiss-cheese-2015]
 - The field is critiqued for **lacking patient-outcome-based quality metrics**, relying instead on process measures, satisfaction scores, and incident counts [marks-swiss-cheese-2015]
 - A standard safety glossary distinguishes **slip** (doing something unintended, observable), **lapse** (failing to do something intended, often unobservable), and **mistake** (a purposeful action based on incorrect knowledge/judgment) [marks-swiss-cheese-2015]
@@ -103,6 +121,7 @@ Human factors — including supervision quality, staffing levels, fatigue, commu
 - [[incident-learning-systems-international]] — SAFRON data was used in the Weintraub HFACS study; RO-ILS data used in BN-HFACS study
 - [[rt-patient-safety-context-map]] — human factors/staffing is a key gap identified in the context map; this page addresses it
 - [[radiation-safety-culture-healthcare]] — IAEA's 10 Safety Culture Traits provide the organizational framework within which human factor risks operate; organizational climate (HFACS Tier 4) directly maps to safety culture deficiencies; Just Culture principle is shared
+- [[just-culture-radiotherapy]] — Just Culture is the organisational prerequisite for near-miss reporting; the three-component model (Blame / Just / No-Blame) is the operating philosophy of the Clinical Safety Shield framework
 - [[peer-review-radiotherapy]] — peer review and verbal timeouts are "double-check" defenses in the hierarchy of effectiveness; emergent treatments use dual chart checks
 - [[rt-quality-management]] — the hierarchy of effectiveness and Swiss Cheese layering guide how a QM program selects interventions
 - [[rt-accidents-aviation-lessons]] — the same human-factors core (SHEL/SHELL, just culture, system-not-individual) and aviation CRM lineage
@@ -116,6 +135,7 @@ Human factors — including supervision quality, staffing levels, fatigue, commu
 - How does shift length and time-of-day affect skill-based error rates in RT?
 - What does a validated CRM training curriculum for radiation oncology look like?
 - How do human factor risks interact with automation risks as workflows become more automated?
+- **Conflict — Swiss Cheese 4-layer labeling:** [rt-safety-shield-pptx] (the original deck) labels the four layers as safety culture → procedures/QA → physics checks → clinical review/time-out (see "Clinical Safety Shield" above), while [rt-safety-shield-traits-pptx] (a later version of the same departmental deck) labels four layers as protocols/procedures → systemic design & automation → double QA control → staff vigilance/time-out. Both are internally consistent 4-layer defence-in-depth models but order and name the layers differently; not reconciled — treat as two illustrative variants of the same underlying deck rather than a single canonical layer order.
 
 ## Raw Notes
 
@@ -137,3 +157,4 @@ Human factors — including supervision quality, staffing levels, fatigue, commu
 - [mazur-workload-2013]: Mazur LM, Mosaly PR, Hoyle LM, Jones EL, Marks LB, "Subjective and objective quantification of physician's workload and performance during radiation therapy planning tasks," *Pract Radiat Oncol* 3:e171–e177 (2013). UNC; NASA-TLX redline ~55.
 - [mullen-nmri-reliability-2016]: Mullen T, Nyflot MJ, ... Ford EC, "Interrater reliability of a near-miss risk index for incident learning systems in radiation oncology," *Pract Radiat Oncol* 6:429–435 (2016). Univ. of Washington.
 - [dominello-10yr-qa-2015]: Dominello MM, Paximadis P, Zaki M, Hammoud A, Campbell S, Komajda M, Dyson G, Bossenberger T, Burmeister J, "Ten-year trends in safe radiation therapy delivery and results of a radiation therapy quality assurance intervention," *Pract Radiat Oncol* 5:e665–e671 (2015). Wayne State / Karmanos; "no rushed treatment" / no-LSR policy; uses Radiation Error Scoring System (Konski 2009).
+- [rt-safety-shield-traits-pptx]: "מעטפת ההגנה" (The Safety Shield) — a later/expanded version of the same Hebrew departmental presentation as [rt-safety-shield-pptx] (`raw/Radiotherapy_Safety_Shield_with_traits.pptx`), 15 slides, image-based. Adds the critical-chain framing (slide 2), the 36-event root-cause/stage-of-occurrence breakdown (slide 9), the FMEA/STPA "Clinical Safety Shield" process map (slide 10, see [[fmea-radiotherapy]]), and a 6-tier hierarchy-of-effectiveness pyramid (slide 5); slides 12–15 recap the IAEA 10 Safety Culture Traits already covered in [[radiation-safety-culture-healthcare]].

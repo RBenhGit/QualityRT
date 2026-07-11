@@ -4,6 +4,32 @@ Append-only chronological record of all wiki operations.
 
 ---
 
+## 2026-07-11 — Factual correction + deck spec produced
+
+**Operation:** Correction and output (not an ingest)
+**Correction:** The 1990 Spanish radiotherapy accident was mislabeled **"Salamanca"** in `rt-accidents-aviation-lessons`. The source decks label it only "ספרד/Spain (1990)"; the actual site was **Zaragoza** (Hospital Clínico, Sagittaire accelerator). Corrected the heading, facts (engineers repaired a fault → no independent physicist recheck + wrong console display → 36 MeV instead of 6 MeV → of 27 patients ≥15 died), connections, open question, and source note. (Historical mentions in earlier log entries below left as-is per append-only.)
+**Output produced:** `output/safety_shield_deck_spec.md` — a full 18-slide NotebookLM/Gamma production spec for the "מעטפת ההגנה" talk (per-slide content + visual direction + speaker notes), grounded in `Incident reporting.xlsx`/discussion_7 and `safety_culture_traits_hebrew.html`; learning-cycle slide directed to replicate the department's existing ∞ diagram.
+**Notes:** No wiki topic pages created; this documents a factual fix and a session deliverable.
+
+---
+
+## 2026-07-11 — Ingestion run (Safety Shield deck, "with traits" version)
+
+**Operation:** Source file processed
+**Sources processed:** [rt-safety-shield-traits-pptx] (`raw/Radiotherapy_Safety_Shield_with_traits.pptx`)
+**File format note:** Entirely image-based PPTX (15 slides, all PNG, 1:1 slide-to-image mapping); extracted via ZIP/XML, slides read visually. Hebrew-language departmental presentation — a later/expanded version of the same deck as [rt-safety-shield-pptx] (`raw/Radiotherapy_Safety_Shield_(6).pptx`, ingested 2026-06-26), same title ("מעטפת ההגנה"), but with additional and re-ordered content.
+**Pages created:** 0
+**Pages updated (5):**
+- `human-factors-rt-safety` — added the 5-role "critical treatment chain" concept (slide 2); added a 36-event root-cause/stage-of-occurrence breakdown for the existing 2015–2017 local dataset (slide 9); refined the hierarchy-of-effectiveness fact with an explicit 6-tier pyramid naming personal vigilance as its own base tier (slide 5); flagged a Swiss-Cheese 4-layer *labeling* discrepancy between the two deck versions as an Open Question (not reconciled).
+- `fmea-radiotherapy` — added the "Clinical Safety Shield" 3-step FMEA workflow, explicitly naming STPA (System-Theoretic Process Analysis) as a complementary technique (slide 10); added the frontline-staff-not-managers quality-champion-team rationale; new [[human-factors-rt-safety]] connection.
+- `just-culture-radiotherapy` — added a new verbatim quote ("we fix systems, not people"), the Blame-Culture-past-vs-Just-Culture-today elaboration, and the "reporting is an act of clinical responsibility" reframing (slides 6, 11).
+- `incident-learning-systems-international` — refined the ILS Learning Cycle model with the specific named stations on each loop (slide 8); added the new reporting form's anonymity feature as a specific mechanism behind the reporting-culture shift (slide 7).
+- `rt-accidents-aviation-lessons` — flagged a contradiction: this deck states the Salamanca 1990 accident killed "at least 15" of 27 patients, vs. "at least 17" in the original deck; recorded as an unresolved Open Question rather than silently picking one figure; added the deck's "overload, communication failure, no double-checks" cross-case Insight Bar note.
+- `radiation-safety-culture-healthcare` — added the deck as a corroborating source (slides 12–15 independently recap the same IAEA 10 Safety Culture Traits already documented on this page); no new facts, no content change.
+**Notes:** Slides 12–15 duplicate the already-ingested IAEA Radiation Safety Culture Trait Talks Handbook content verbatim — treated as source corroboration, not new information, per schema's "no invented facts" rule. Two internal contradictions between this deck and its earlier sibling version ([rt-safety-shield-pptx]) were found and flagged rather than resolved: (1) Salamanca 1990 death toll (15 vs 17), (2) Swiss Cheese 4-layer naming/order. `wiki/index.md` Last-updated bumped to 2026-07-11; no new pages, so Total pages remains 28.
+
+---
+
 ## 2026-07-08 — Lint pass (full 7-check audit + fixes)
 
 **Operation:** Lint and fix, all 27 topic pages
@@ -47,6 +73,28 @@ Append-only chronological record of all wiki operations.
 **Source:** Ford EC et al., "Consensus recommendations for incident learning database structures in radiation oncology," *Med Phys* 39(12):7272–7290 (2012). Source slug: [ford-ils-consensus-2012] (previously cited from abstract; now fully ingested).
 **Pages updated:** `incident-learning-systems-international.md` — major expansion of the ILS database structure section with: 14-item functional requirements table (Table I) with priority ranking, full EBRT/brachy process map phase listing with SB counts, complete dual severity scales with exact score descriptors, clinical action scale (A–D), full 6-category causal taxonomy with subcategories, three-level data element structure (Reporter/Analyst/Responder), operational/investigation timeline recommendations, CAST aviation analogy.
 **Pages created:** 0
+
+---
+
+## 2026-06-26 — Ingestion run
+
+**Operation:** Source file processed
+**Sources processed:** [rt-safety-shield-pptx] (`raw/Radiotherapy_Safety_Shield_(6).pptx`)
+**File format note:** Entirely image-based PPTX (11 slides, all PNG); extracted via ZIP/XML, slides read visually. Hebrew-language departmental presentation titled "מעטפת ההגנה: ניהול סיכונים ולמידה ארגונית בדיות רפיה" (The Safety Shield: Risk Management and Organizational Learning in Radiotherapy).
+
+**Pages created (1):** `just-culture-radiotherapy` — three-component Just Culture framework (Blame / Just / No-Blame), ICAO SMS origin, prerequisites for ILS reporting.
+
+**Pages updated (3):**
+- `rt-accidents-aviation-lessons` — added Salamanca (Spain, 1990) accident (36MeV vs 6MeV energy confusion, 17 deaths, 27+ patients); enriched Glasgow/Lisa Norris case with dose specifics (55.56 Gy / 67% overdose); added `[[just-culture-radiotherapy]]` connection.
+- `human-factors-rt-safety` — added "Clinical Safety Shield" named 4-layer framework (safety culture → procedures/QA → physics checks → clinical review/time-out); added local dept data (93% errors caught pre-patient, 2015–2017); added `[[just-culture-radiotherapy]]` connection.
+- `incident-learning-systems-international` — added ILS Learning Cycle model (Knowledge Cycle ↔ Execution Cycle infinity loop); added local dept data (93% interception, structured taxonomy migration); added `[[just-culture-radiotherapy]]` connection.
+
+**New key content from source:**
+- Salamanca 1990 accident (energy confusion, not previously in wiki)
+- Just Culture three-component model (now has dedicated page)
+- 93% pre-patient error catch rate (Israeli RT dept, 2015–2017)
+- ILS infinity loop model (Knowledge ↔ Execution cycles)
+- Named "Clinical Safety Shield" framework integrating FMEA + Swiss Cheese + ILS + Just Culture
 
 ---
 

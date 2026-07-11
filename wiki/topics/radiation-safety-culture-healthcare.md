@@ -2,8 +2,8 @@
 
 **Type:** Topic
 **Status:** mature
-**Last updated:** 2026-06-18
-**Sources:** [radiation-safety-culture-trait-talks], [kusano-safety-culture-2015], [mazur-eventlearning-cqi-culture-2015], [chera-multifaceted-initiatives-2014]
+**Last updated:** 2026-07-11
+**Sources:** [radiation-safety-culture-trait-talks], [kusano-safety-culture-2015], [mazur-eventlearning-cqi-culture-2015], [chera-multifaceted-initiatives-2014], [rt-safety-shield-traits-pptx]
 
 ## Summary
 
@@ -110,3 +110,4 @@ Radiation safety culture in healthcare is the assembly of characteristics and at
 - [kusano-safety-culture-2015]: Kusano AS, Nyflot MJ, Zeng J, ... Ford EC, "Measurable improvement in patient safety culture: A departmental experience with incident learning," *Pract Radiat Oncol* 5:e229–e237 (2015). Univ. of Washington; the foundational study linking ILS use to measured safety-culture gains.
 - [mazur-eventlearning-cqi-culture-2015]: Mazur L, Chera B, Mosaly P, ... Marks LB, "The association between event learning and continuous quality improvement programs and culture of patient safety," *Pract Radiat Oncol* 5:286–294 (2015). UNC; "good catch" + Lean/A3 program.
 - [chera-multifaceted-initiatives-2014]: Chera BS, Mazur L, Jackson M, ... Marks LB, "Quantification of the impact of multifaceted initiatives intended to improve operational efficiency and the safety culture," *Pract Radiat Oncol* 4:e101–e108 (2014). UNC.
+- [rt-safety-shield-traits-pptx]: "מעטפת ההגנה" (The Safety Shield), Hebrew departmental deck (`raw/Radiotherapy_Safety_Shield_with_traits.pptx`), 15 slides. Slides 12–15 independently reproduce all 10 IAEA Safety Culture Traits with matching descriptions/sub-characteristics — a corroborating recap of this page's primary source, no new facts. See [[human-factors-rt-safety]] for the full source note.

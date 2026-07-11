@@ -2,8 +2,8 @@
 
 **Type:** Topic
 **Status:** mature
-**Last updated:** 2026-07-08
-**Sources:** [incident-learning-systems-international], [ford-ils-consensus-2012], [nyflot-ils-metrics-2015], [kim-ils-tbi-impact-2017], [rosis-cunningham-2010], [clark-5yr-incident-learning-2013], [pawlicki-ils-levels-2017], [incident-reporting-xlsx-il]
+**Last updated:** 2026-07-11
+**Sources:** [incident-learning-systems-international], [ford-ils-consensus-2012], [nyflot-ils-metrics-2015], [kim-ils-tbi-impact-2017], [rosis-cunningham-2010], [clark-5yr-incident-learning-2013], [pawlicki-ils-levels-2017], [incident-reporting-xlsx-il], [rt-safety-shield-pptx], [rt-safety-shield-traits-pptx]
 
 ## Summary
 
@@ -136,6 +136,19 @@ The taxonomy is designed to be used by individuals with varied expertise; robust
 - A cumbersome hospital-wide electronic reporting interface **cut reporting volume nearly in half** (150.8 → 78.6 reports/quarter), prompting reversion to paper — usability is decisive for ILS uptake [clark-5yr-incident-learning-2013]
 - A key cultural benefit was **bridging the professional silos** between radiation therapy, radiation oncology, and medical physics [clark-5yr-incident-learning-2013]
 
+### ILS Learning Cycle model
+- An ILS operates as an **infinity loop** between two interlocking cycles: the **Knowledge Cycle** (report → analysis → sharing) and the **Execution Cycle** (decision-making → policy → implementation → back to reporting); breaking either cycle prevents learning from translating into safer practice [rt-safety-shield-pptx]
+- A later version of the source deck names the specific stations on each loop: the **Knowledge Cycle** runs Report → Feedback loop → (Multidisciplinary) Discussion → back to Report; the **Execution Cycle** runs Investigation & Solution Development → Implementation → Monitoring → back to Investigation [rt-safety-shield-traits-pptx]
+- The key vulnerability is the gap between the Knowledge Cycle and Execution Cycle — many departments accumulate reports (knowledge) but fail to close the loop with operational changes (execution) [rt-safety-shield-pptx]
+- This model maps directly onto the Davies 2017 critique: "a strong culture of reporting but a poor culture of learning" describes a department that runs the Knowledge Cycle but not the Execution Cycle [davies-aviation-safety-2017]
+
+### Local departmental safety data (Israeli RT department, 2015–2017)
+- **93% of radiotherapy errors were caught before reaching the patient** over 2015–2017 in a departmental ILS tracking period; errors were captured at pre-treatment verification steps (physics review, chart check, time-out) [rt-safety-shield-pptx]
+- Errors were distributed across prescription/planning, imaging, data transfer, treatment delivery, and technical/equipment categories; near-misses far outnumbered actual patient-impacting events [rt-safety-shield-pptx]
+- The 93% pre-patient interception rate is consistent with Clark et al. (Ottawa) who found only 1.95% of 2,506 reports reached/impacted a patient [clark-5yr-incident-learning-2013], [rt-safety-shield-pptx]
+- Tool evolution: the department migrated from **subjective narrative-only forms** (unreliable, non-comparable) to **structured taxonomy-coded forms** capturing event type, causal factor, severity score, risk level, and free-text details — enabling trend analysis [rt-safety-shield-pptx]
+- The old form required free text only and identified the reporting sector (no anonymity), yielding subjective, uncomparable entries; the new form adds **fully anonymous reporting** and clean, objective taxonomy fields — a specific mechanism behind the reporting-culture shift, since anonymity removes the residual fear-of-blame barrier even under an already-adopted Just Culture policy [rt-safety-shield-traits-pptx]
+
 ### Local / national / international levels (Pawlicki et al. 2017)
 - ILS operate at three levels — **local, national, international** — with the same goals; larger (national/international) pools enable wider comparison and faster learning, while local systems give the granular detail needed to interrogate which safety barrier failed [pawlicki-ils-levels-2017]
 - **ROSIS evolved into ROSEIS** (Radiation Oncology Safety Education and Information System) and was absorbed into the ESTRO platform after the original ROSIS's lack of dedicated funding threatened its sustainability (vendor support from Elekta/Varian helped) [pawlicki-ils-levels-2017]
@@ -163,6 +176,7 @@ The taxonomy is designed to be used by individuals with varied expertise; robust
 - [[human-factors-rt-safety]] — SAFRON data used in HFACS analysis studies; ROSIS data used in comparative research
 - [[rt-patient-safety-context-map]] — international ILS landscape is a key gap identified in the context map
 - [[radiation-safety-culture-healthcare]] — Trait 8 (Problem Identification and Resolution) and Trait 9 (Environment for Raising Concerns) are the safety culture prerequisites for effective incident learning; ILS only works when staff don't fear retaliation for reporting; declining NMRI and rising report volume track measurable safety-culture improvement
+- [[just-culture-radiotherapy]] — Just Culture is the prerequisite condition for any ILS to yield honest, high-volume reporting; the Knowledge Cycle only runs if staff trust reporting is non-punitive
 - [[fmea-radiotherapy]] — FMEA (proactive) and incident learning (reactive) are complementary; the consensus causal taxonomy and severity scales deliberately differ from TG-100's FMEA scales but cover similar ground
 - [[tg100-aapm]] — the consensus ILS process maps parallel (but differ from) the TG-100 IMRT process tree; TG-100 omits "safety barriers" because FMEA handles barriers via the detectability score
 - [[rt-accidents-aviation-lessons]] — incident learning's rationale (Heinrich 1:30:300) and the critique of counting reports vs. learning
@@ -190,3 +204,4 @@ The taxonomy is designed to be used by individuals with varied expertise; robust
 - [roils-first-year-2015]: Hoopes DJ et al., "RO-ILS: A report from the first year of experience," *Pract Radiat Oncol* 5:312–318 (2015)
 - [clark-5yr-incident-learning-2013]: Clark BG, Brown RJ, Ploquin J, Dunscombe P, "Patient safety improvements in radiation treatment through 5 years of incident learning," *Pract Radiat Oncol* 3:157–163 (2013). Ottawa Hospital.
 - [pawlicki-ils-levels-2017]: Pawlicki T, Coffey M, Milosevic M, "Incident Learning Systems for Radiation Oncology: Development and Value at the Local, National and International Level," *Clin Oncol* 29:562–567 (2017). Note: ROSIS→ROSEIS (ESTRO); SAFRON = Safety Reporting and Learning System for Radiotherapy (IAEA).
+- [rt-safety-shield-traits-pptx]: Later/expanded version of [rt-safety-shield-pptx] (`raw/Radiotherapy_Safety_Shield_with_traits.pptx`), 15 slides. Slide 8 names the specific Knowledge/Execution Cycle stations; slide 7 details the old-vs-new reporting form, including the new form's anonymity feature. See [[human-factors-rt-safety]] for the full source note.

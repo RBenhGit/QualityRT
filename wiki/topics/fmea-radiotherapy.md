@@ -2,8 +2,8 @@
 
 **Type:** Topic
 **Status:** developing
-**Last updated:** 2026-05-24
-**Sources:** [tg100-aapm-2016], [fmea-jacmp-broggi-2013]
+**Last updated:** 2026-07-11
+**Sources:** [tg100-aapm-2016], [fmea-jacmp-broggi-2013], [rt-safety-shield-traits-pptx]
 
 ## Summary
 
@@ -24,6 +24,8 @@ Failure Mode and Effects Analysis (FMEA) is a proactive, bottom-up risk assessme
 - RO-ILS data confirms: treatment planning accounts for ~30% of all reported incidents nationally [tg100-aapm-2016]
 - FMEA complements **Fault Tree Analysis (FTA)**: FMEA is bottom-up (failure → effect); FTA is top-down (adverse outcome → root causes) [tg100-aapm-2016]
 - FMEA has been applied to automated contouring and planning tools to assess deployment risk [fmea-jacmp-broggi-2013]
+- A departmental "Clinical Safety Shield" framework names a **three-step FMEA workflow**: (1) break the process down into components (a detailed process map, e.g. urgent-patient intake through treatment and discharge), (2) identify potential failure modes at each step — explicitly naming **STPA (System-Theoretic Process Analysis)** as a complementary technique for asking "what can go wrong at this station?", and (3) prioritize risks via RPN and add hardware/software barriers and interlocks at the highest-risk points [rt-safety-shield-traits-pptx]
+- The quality-champion team applying this process is deliberately composed of **frontline staff rather than managers**, on the reasoning that day-to-day operational experience — not managerial oversight — is the key input for identifying process weak points [rt-safety-shield-traits-pptx]
 
 ## High-Risk Failure Mode Categories (Across Literature)
 
@@ -56,6 +58,7 @@ Failure Mode and Effects Analysis (FMEA) is a proactive, bottom-up risk assessme
 - [[brachytherapy-hdr-safety]] — the brachytherapy "length" failure modes and NRC event taxonomy feed brachytherapy FMEA; ASTRO HDR guidance points to TG-100 FMEA
 - [[advanced-modality-rt-safety]] — FMEA's catastrophic-failure focus parallels the IMRT/SRS-SBRT white-paper safeguards
 - [[rt-accidents-aviation-lessons]] — FMEA is the proactive leg of a safety-management system; Johns Hopkins FMEA missed 42% of incident-reported errors
+- [[human-factors-rt-safety]] — the "Clinical Safety Shield" names FMEA as pillar 1 of its four-mechanism framework; the 5-role critical-chain concept maps onto the same urgent-patient process map used in the FMEA/STPA example here
 
 ## Open Questions
 
@@ -70,3 +73,4 @@ Failure Mode and Effects Analysis (FMEA) is a proactive, bottom-up risk assessme
 - FMEA for automated contouring/planning (Practical Radiation Oncology, 2022): https://www.practicalradonc.org/article/S1879-8500(22)00008-X/fulltext
 - FMEA in proton beam radiotherapy (PMC): https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3679803/
 - TG-100 PDF: https://pps4rt.com/wp-content/uploads/2019/07/AAPM-TG-100-RT-Quality-Manageemnt.pdf
+- [rt-safety-shield-traits-pptx]: "מעטפת ההגנה" (The Safety Shield), Hebrew departmental deck (`raw/Radiotherapy_Safety_Shield_with_traits.pptx`), slide 10 — "The Clinical Safety Shield: FMEA Process Mapping," pairs FMEA with STPA and an urgent-patient process flowchart. See [[human-factors-rt-safety]] for the full source note.

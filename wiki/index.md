@@ -25,6 +25,7 @@ Master catalog of all pages. Updated automatically on every ingest.
 | [claude-code](topics/claude-code.md) | Topic | stub | Anthropic's agentic CLI tool; recommended runtime for LLM Wiki ingest/query/lint operations. |
 | [obsidian](topics/obsidian.md) | Topic | stub | Markdown knowledge management app with graph view; recommended viewer for compiled LLM Wiki artifacts. |
 | [rag-retrieval-augmented-generation](topics/rag-retrieval-augmented-generation.md) | Topic | stub | AI pattern using vector retrieval at query time; the LLM Wiki pattern is positioned as a ~70x more token-efficient alternative for stable research bases. |
+| [just-culture-radiotherapy](topics/just-culture-radiotherapy.md) | Topic | developing | Named three-component philosophy (Blame / Just / No-Blame) that enables near-miss reporting; prerequisite for all incident learning; adapted from aviation SMS into healthcare. |
 | [peer-review-radiotherapy](topics/peer-review-radiotherapy.md) | Topic | mature | Peer review ("audit and feedback") is one of the most effective tools for assuring the quality of qualitative, patient-specific medical decisions in RT... |
 | [audit-accreditation-radiotherapy](topics/audit-accreditation-radiotherapy.md) | Topic | mature | Audit and accreditation are the structural mechanisms by which RO departments verify their processes conform to professional/regulatory guidance (SPA, APEx)... |
 | [advanced-modality-rt-safety](topics/advanced-modality-rt-safety.md) | Topic | mature | Safety in advanced external-beam modalities (IMRT, SRS/SBRT) per the ASTRO Target Safely white papers: commissioning, small-field dosimetry, forced time-outs... |
@@ -34,5 +35,5 @@ Master catalog of all pages. Updated automatically on every ingest.
 
 ---
 
-*Last updated: 2026-07-08*
-*Total pages: 27*
+*Last updated: 2026-07-11*
+*Total pages: 28*
